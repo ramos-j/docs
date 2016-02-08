@@ -16,7 +16,11 @@
 .page-title,
 .post-title,
 .post-title a {
-  color: #303030;
+  color: $mkr-dark;
+  a:hover {
+    text-decoration: none;
+    border-bottom: 1px dotted $mkr-dark;
+  }
 }
 .page-title,
 .post-title {

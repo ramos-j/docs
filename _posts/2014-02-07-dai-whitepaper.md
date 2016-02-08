@@ -7,6 +7,7 @@ date: 2016-02-07
 
 ---
 
+  {% markdown dai-whitepaper.md %}
 
 
 *The Dai is a stable, deflationary cryptocurrency that enables borrowers and lenders to transact in a credit system that is permissionless and has low risk. Dai issuers (borrowers) issue Dai by posting Bitcoin, Ether and other cryptocurrency as collateral on the Ethereum blockchain, and sell these Dai on the market to Dai holders (lenders) for liquid assets. Dai holders use the Dai as a stable cryptocurrency for trade, and to earn capital gains from its deflation. Maker is the Ethereum powered Decentralized Autonomous Organization that operates the infrastructure of the Dai Credit System, and provides default insurance to its users in exchange for an insurance fee.*
