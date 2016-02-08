@@ -36,7 +36,7 @@
 
 ##Value proposition
 
-**Dai issuers use the Dai** to borrow money instantly and without any requirements beyond posting adequate collateral. There are no term limits, and debt positions can opened and covered at any time. This means the Dai can service any kind of credit demand, including margin trading, business credit and mortgage financing.
+**Dai issuers use the Dai** to borrow money instantly and without any requirements beyond posting adequate collateral. There are no term limits, and debt positions can opened and covered at any time. This means the Dai can service most types of credit demand, including margin trading and business credit.
 
 **Dai holders use the Dai** as a stable cryptocurrency on the Ethereum blockchain, and as a low risk investment asset that is free from volatility risk and is long term deflationary. The Dai has low risk relative to most blockchain assets because every Dai is provably backed by a diversified pool of collateral on the Ethereum blockchain, as well as by Makers insurance.
 
