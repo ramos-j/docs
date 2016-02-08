@@ -3,7 +3,7 @@ layout: post
 title: The Dai Credit System
 subtitle: Decentralized, autonomous and insured by Maker
 version: 0.3
-date: 2016-01-31
+date: 2016-02-07
 
 ---
 
