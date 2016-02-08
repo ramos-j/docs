@@ -1,0 +1,38 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,400italic,700,700italic);
+
+
+$mkr-green: #1ABC9C;
+$mkr-gray: #CFD8DC;
+$mkr-dark: #30343F;
+$mkr-light: #EFF1F3;
+$mkr-white: #F8F7F5;
+
+$gray-1: #f9f9f9;
+$gray-2: #ccc;
+$gray-3: #767676;
+$gray-4: #515151;
+$gray-5: #313131;
+
+$red: #ac4142;
+$orange: #d28445;
+$yellow: #f4bf75;
+$green: #90a959;
+$cyan: #75b5aa;
+$blue: #268bd2;
+$brown: #8f5536;
+
+$root-font-family: "Roboto", Arial, sans-serif;
+$root-font-size: 14px;
+$root-line-height: 1.5;
+
+$body-color: $mkr-dark;
+$body-bg: $mkr-white;
+$link-color: $mkr-green;
+
+$border-color: $mkr-light;
+
+$large-breakpoint: 38em;
+$large-font-size: 18px;
+
+$code-font-family: Menlo, Monaco, "Courier New", monospace;
+$code-color: #bf616a;
