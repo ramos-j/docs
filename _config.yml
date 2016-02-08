@@ -4,9 +4,9 @@ permalink:           pretty
 # Setup
 title:               Maker
 tagline:             Whitepapers and general documentation
-url:                 http://makerdao.github.io/
+url:                 http://makerdao.github.io/docs/
 paginate:            1
-baseurl:             "http://makerdao.github.io/"
+baseurl:             "http://makerdao.github.io/docs/"
 
 # Assets
 #
