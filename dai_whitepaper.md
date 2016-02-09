@@ -68,6 +68,7 @@ Issuing Dai can be considered as borrowing capital from the Dai Credit System. I
 The ownership of a CDP is transferable, but CDPs are not fungible with each other. This allows them to be used in smart contracts that can perform more complex methods of issuance involving more than one actor.
 
 >*__Example 4__: An issuer uses an Ethereum contract to issue 100 SDR worth of Dai in collaboration with a counterparty that wishes to become a Dai holder. The issuer contributes 50 SDR worth of BTC while the holder contributes 100 SDR worth of BTC. The OTC contract creates a CDP and issues 100 SDR worth of Dai, and then gives the holder this newly issued Dai. The holder effectively bought 100 SDR worth Dai for 100 SDR worth of BTC. The OTC contract gives the issuer ownership of the CDP, including its 100 SDR worth of issuance debt as well as its 150 SDR worth of BTC collateral. Since he started with only 50 SDR worth of BTC he is now 3x leveraged.*
+
 ###Price stability
 
 The stability of the Dai around the target price is maintained using **deflation rate adjustment** to continuously match demand between holders and issuers, while the **forced cover** mechanism directly enforces the target price in the markets using collateral from CDPs, as well as ensuring short term liquidity and price support in the face of Dai demand shocks.
