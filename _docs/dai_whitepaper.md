@@ -1,3 +1,12 @@
+---
+layout: doc
+title: The Dai Credit System
+subtitle: Decentralized, autonomous and insured by Maker
+version: 0.3
+
+---
+
+
 #The Dai Credit System
 ##Decentralized, autonomous and insured by Maker
 
@@ -6,11 +15,7 @@
 
 
 
-
-
-
-
-*The Dai is a stable, deflationary cryptocurrency that enables borrowers and lenders to transact in a credit system that is permissionless and has low risk. Dai issuers (borrowers) issue Dai by posting Bitcoin, Ether and other cryptocurrency as collateral on the Ethereum blockchain, and sell these Dai on the market to Dai holders (lenders) for liquid assets. Dai holders use the Dai as a stable cryptocurrency for trade, and to earn capital gains from its deflation. Maker is the Ethereum powered Decentralized Autonomous Organization that operates the infrastructure of the Dai Credit System, and provides default insurance to its users in exchange for an insurance fee.* 
+*The Dai is a stable, deflationary cryptocurrency that enables borrowers and lenders to transact in a credit system that is permissionless and has low risk. Dai issuers (borrowers) issue Dai by posting Bitcoin, Ether and other cryptocurrency as collateral on the Ethereum blockchain, and sell these Dai on the market to Dai holders (lenders) for liquid assets. Dai holders use the Dai as a stable cryptocurrency for trade, and to earn capital gains from its deflation. Maker is the Ethereum powered Decentralized Autonomous Organization that operates the infrastructure of the Dai Credit System, and provides default insurance to its users in exchange for an insurance fee.*
 
 
 
@@ -61,7 +66,7 @@ The Dai deflation means that the market value given in SDR of the issuance debt 
 
 >*__Example 2__: An issuer issues 100 SDR worth of Dai (note: not 100 Dai) by locking 150 SDR worth of BTC into a CDP. The total effective cost of insurance and deflation over the following year is 5% relative to SDR. When the issuer wants to retrieve his BTC, 105 SDR worth of Dai is required to cover the CDP.*
 
-Issuing Dai can be considered as borrowing capital from the Dai Credit System. In practice the issuer is either seeking to take a leveraged long position on the asset used as collateral (margin trading), or is seeking liquidity in a hard currency (such as BTC or USD) without selling the asset used as collateral. The last example could be the case of a business collateralizing stock in order to raise short term liquidity for operational expenses. In both cases the way the issuer actually obtains the asset that he wants is by first creating the CDP with their collateral and issuing Dai, then selling the newly issued Dai on the market in exchange for their desired asset or currency. Dai holders that pay assets and currency in exchange for Dai do this in order to earn capital gains from the Dai deflation and/or use it as a stable cryptocurrency on the Ethereum blockchain. 
+Issuing Dai can be considered as borrowing capital from the Dai Credit System. In practice the issuer is either seeking to take a leveraged long position on the asset used as collateral (margin trading), or is seeking liquidity in a hard currency (such as BTC or USD) without selling the asset used as collateral. The last example could be the case of a business collateralizing stock in order to raise short term liquidity for operational expenses. In both cases the way the issuer actually obtains the asset that he wants is by first creating the CDP with their collateral and issuing Dai, then selling the newly issued Dai on the market in exchange for their desired asset or currency. Dai holders that pay assets and currency in exchange for Dai do this in order to earn capital gains from the Dai deflation and/or use it as a stable cryptocurrency on the Ethereum blockchain.
 
 >*__Example 3__: An issuer issues 100 SDR worth of Dai by posting 150 SDR worth of BTC to a CDP, and buys another 100 SDR worth of BTC with the newly issued Dai. This gives him a 1.66x exposure to BTC/SDR volatility, and he can freely transfer the 100 SDR worth of BTC, while the 150 SDR worth of BTC held in the CDP as collateral is locked until the 100 issuance debt plus insurance fee is covered.*
 
@@ -80,7 +85,7 @@ When the market price is below the target price, the deflation rate increases. T
 
 The same mechanism works in reverse if the market price is higher than the target price. The deflation rate decreases, increasing demand for issuance and thus increasing Dai supply, while decreasing demand for holding Dai (less capital gains from deflation), causing the Dai price to decrease, pushing it down towards the target price.
 
-This mechanism can be considered a negative feedback loop. A deviation of the market price away from the target price will trigger a push in the opposite direction, towards the target price. The magnitude of the deflation rate adjustments depend on how strongly the market price deviates from the target price; very strong deviations result in bigger adjustments whereas small deviations result in very small adjustments. 
+This mechanism can be considered a negative feedback loop. A deviation of the market price away from the target price will trigger a push in the opposite direction, towards the target price. The magnitude of the deflation rate adjustments depend on how strongly the market price deviates from the target price; very strong deviations result in bigger adjustments whereas small deviations result in very small adjustments.
 
 ####Short term liquidity and price support
 
@@ -101,14 +106,14 @@ The slope of the collateral curve is initially simplified to always be approxima
 If the collateralization ratio of a CDP goes below the zero point, the bounty for performing a forced cover on the CDP becomes positive. At this point the forced cover is also referred to as a margin call, as it has a similar function of closing out positions that are too risky. The positive bounty will generally cause market forces to instantly margin call the CDP in order to earn the free profit from buying a larger portion of the CDPs collateral at the same price.
 
 >*__Example 6__: An issuer creates a CDP with 130 SDR worth of BTC as collateral, and uses it to issue 100 SDR worth of Dai. The price of BTC subsequently falls 10%, leaving the CDP at 117% collateralization. The bounty is now +13%, and a Dai holder quickly margin calls it, paying down the 100 SDR debt and obtaining 113 SDR worth of BTC, with only 4 SDR worth of BTC remaining to be returned to the issuer.*
- 
+
 The purpose of the forced cover is to provide a buffer of liquid assets from the CDPs in case the price of Dai suddenly drops dramatically due to a shock in demand. This is because a CDP's bounty is determined in terms of the Dai target price, and the **effective bounty** changes in response to the market price, changing with the same magnitude but in the opposite direction of a deviation of the market price from the target price. This creates another negative feedback loop that serves to push the market price towards the target price.
 
 >*__Example 7__: Consider the scenario where there are active Bitcoin CDPs at 135% collateralization and a large Dai selloff suddenly occurs. If the Dai market price deviates more than 5% below the target price, the effective bounty of all CDPs will increase by more than 5%. Thus a CDP with 135% or lower collateralization which have a nominal bounty of -5%, will see their effective bounty hit 0% or higher, causing them to be margin called by profit seeking traders. This causes the supply of Dai to decrease and creates positive pressure on the Dai market price, pushing it upwards.*
 
 Forced covers and the collateral curve has a different effect on the market price when the market price deviates above the target price. The zero point of a collateral type is also the minimum initial collateralization requirement for issuing new Dai, but like the bounty this collateralization requirement is calculated in the target price. Thus, when the market price increases, the effective collateral requirement for issuing Dai go down, which in turn increases demand for issuance, increasing supply of Dai, which pushes the price down in the direction of the target price.
 
-###Undercollateralization 
+###Undercollateralization
 
 The biggest risk to the stable value of the Dai is the risk of CDP undercollateralization.
 Should a Collateralized Debt Position see a massive price decrease in its collateral to the point where its collateralization ratio falls below 100%, there would no longer be enough collateral in the position to buy back all the Dai it originally issued (plus insurance fee). If such undercollateralization events were left unchecked and allowed to happen to a significant amount of the outstanding CDPs, it could destroy confidence in the Dai and break its stability. Widespread, sudden undercollateralization that happens too fast to be mitigated by margin calls is also referred to as a **black swan event**.
@@ -122,7 +127,7 @@ Instead, Maker will autonomously perform a Maker bailout, using funds from the M
 **Emergency debt**:Should many CDPs become simultaneously undercollateralized to the point where there isn’t enough Dai in the Maker vault to bail them out, Maker automatically issues Dai backed by emergency debt and uses that to perform the Maker bailouts. Emergency debt doesn’t require collateral but is backed by the ability of Maker to inflate the MKR supply. There is also no limit to the amount of emergency debt that can be issued, and it will always correspond to the combined debt of the CDPs that were undercollateralized when the emergency debt was initially triggered.
 
 **Forced MKR inflation**: Once Maker assumes emergency debt, forced MKR inflation gets triggered. The inflation is continuous at a rate that corresponds to a 100% increase of the MKR supply per year. The inflated MKR is automatically sold off for Dai, which is then used to pay down and remove the emergency debt. The forced inflation continues until all emergency debt is paid down and the system returns to normal.
-    
+
 **The function of MKR**:  Ultimately it is the market value of MKR that insures the collateral of the Dai Credit System, and the price of MKR is directly exposed to the risk of the system. To compensate MKR owners for taking on this risk, during times of stability where there is no outstanding emergency debt, the Dai held in the Maker Vault is slowly sold off for MKR, and the obtained MKR is then permanently destroyed, in an automatic process called buy & burn. The rate at which the buy & burn happens is determined by MKR holders through voting. The result is that, in the absence of undercollateralization events, the supply of MKR is decreasing over time, which causes its price to increase.
 
 ###Collateral requirements and debt ceilings
