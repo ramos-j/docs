@@ -1,3 +1,5 @@
+#Introduction to Maker
+
 ##Bitcoin and blockchain technology
 
 Blockchain technology first began with Bitcoin, a cryptographically secured, decentralized digital currency. Bitcoin's unique properties gave it a number of advantages that made it extremely useful for some types of international and internet-based transactions. However, its experimental nature has led to a number of issues including high price volatility, and high cash burn for its proof-of-work based security mechanism.
