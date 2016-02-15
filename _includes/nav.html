@@ -1,12 +1,12 @@
-<nav>
-    <ul>
+<nav class="menu menu--mkr">
+    <ul class="menu__list">
     {% for link in site.navigation %}
         {% assign current = nil %}
-        {% if page.url contains link.url %}
-            {% assign current = 'current' %}
+      {% if page.url == link.url or page.layout == link.layout %}
+            {% assign current = '--current' %}
         {% endif %}
-        <li class="element {% if forloop.first %}first{% endif %} {{ current }} {% if forloop.last %}last{% endif %}">
-            <a href="{{ link.url }}">{{ link.title }}</a>
+        <li class="menu__item{{ current }}  {% if forloop.first %}first{% endif %}  {% if forloop.last %}last{% endif %}">
+            <a class="menu__link" href="{{ link.url }}">{{ link.title }}</a>
         </li>
     {% endfor %}
     </ul>

@@ -3,10 +3,10 @@ permalink:           none
 
 # Setup
 title:               Maker
-tagline:             Whitepapers
+tagline:             Whitepaper
 url:                 http://makerdao.github.io/docs/
 paginate:            1
-#baseurl:             "http://127.0.0.1:4000/"
+baseurl:             "http://makerdao.github.io/docs/"
 
 # Assets
 #
@@ -20,8 +20,7 @@ sass:
 
 # navigation
 navigation:
- - title: Introduction
-   url: /
+
  - title: DAI credit system
    url: /dai-credit-system/
  - title: Keepers & Oracles
