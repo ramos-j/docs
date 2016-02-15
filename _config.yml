@@ -22,21 +22,21 @@ sass:
 navigation:
 
  - title: DAI credit system
-   url: /dai-credit-system/
+   url: /docs/dai-credit-system/
  - title: Keepers & Oracles
-   url: /keepers-and_oracles/
+   url: /docs/keepers-and_oracles/
  - title: Governance & Decentralization
-   url: /governance-and-decentralization/
+   url: /docs/governance-and-decentralization/
 
 # About/contact
 author:
   name:              Rune Christensen
-  url:               https://twitter.com/mdo
+  url:               https://twitter.com/makerdao
   email:             rune@makedao.com
 
 # Custom vars
 version:             1.0.0
-github:
+github:              makerdao
   repo:              https://github.com/makerdao/docs
 
 
