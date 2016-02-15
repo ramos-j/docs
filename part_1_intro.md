@@ -1,4 +1,9 @@
-#Introduction to Maker
+---
+permalink: /
+layout: page
+title: Introduction to Maker
+---
+
 
 ##Bitcoin and blockchain technology
 

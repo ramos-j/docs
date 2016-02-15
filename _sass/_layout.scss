@@ -13,3 +13,24 @@
 footer {
   margin-bottom: 2rem;
 }
+
+
+nav a {
+    text-decoration: none;
+}
+
+nav li {
+    line-height: 25px;
+    font-size: 11px;
+    text-transform: uppercase;
+    padding: 2px 4px;
+}
+
+nav li.current a {
+    color: #111;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}

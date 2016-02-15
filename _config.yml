@@ -1,12 +1,12 @@
 # Permalinks
-permalink:           pretty
+permalink:           none
 
 # Setup
 title:               Maker
-tagline:             Whitepapers and general documentation
+tagline:             Whitepapers
 url:                 http://makerdao.github.io/docs/
 paginate:            1
-baseurl:             "http://makerdao.github.io/docs/"
+#baseurl:             "http://127.0.0.1:4000/"
 
 # Assets
 #
@@ -14,6 +14,20 @@ baseurl:             "http://makerdao.github.io/docs/"
 sass:
   sass_dir:          _sass
   style:            :compressed
+
+
+
+
+# navigation
+navigation:
+ - title: Introduction
+   url: /
+ - title: DAI credit system
+   url: /dai-credit-system/
+ - title: Keepers & Oracles
+   url: /keepers-and_oracles/
+ - title: Governance & Decentralization
+   url: /governance-and-decentralization/
 
 # About/contact
 author:
@@ -28,6 +42,15 @@ github:
 
 
 
+
 markdown: redcarpet
 redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
+
+
+
+gems:
+  - jekyll-mentions
+  - jekyll-sitemap
+  - github-pages
+  - jekyll-paginate

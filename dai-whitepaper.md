@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: The Dai Credit System
 subtitle: Decentralized, autonomous and insured by Maker
 

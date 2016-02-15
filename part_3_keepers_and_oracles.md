@@ -1,4 +1,8 @@
-#Keepers and oracles
+---
+permalink: /keepers-and_oracles/
+layout: page
+title: Keepers and oracles
+---
 
 ##Keepers
 
@@ -10,7 +14,7 @@ The mechanics of the Dai Credit System relies on rational actors to interact and
 
 * Acting as an oracle by providing a price feed to Maker. More information about oracles given below.
 
-To make it easy for anyone to act as a keeper, Maker funds the development of the open source Keeper software stack, which enables anyone to run a server that acts a trading bot and oracle tool to perform the above mentioned functions. It is designed to be run on a small device, such as the Ethereum Computer or a regular raspberry pi. 
+To make it easy for anyone to act as a keeper, Maker funds the development of the open source Keeper software stack, which enables anyone to run a server that acts a trading bot and oracle tool to perform the above mentioned functions. It is designed to be run on a small device, such as the Ethereum Computer or a regular raspberry pi.
 
 ##Oracles
 
@@ -22,4 +26,4 @@ Maker will initially use these oracle systems:
 
 * Keeper, as Makers in house oracle solution this type of oracle is chosen by MKR owners through Makers regular governance mechanisms. Keeper oracles will be cheap to run, and a large of them can provide data together, giving a high level of redundancy and decentralization.
 
-* Oraclize, an external oracle solution that delivers price information as well as SSL-based cryptographic proof that the information has not been tampered with from its source. Oraclize provides a secondary source of information regarding the market price of assets that is signed by the exchanges that run the markets. 
+* Oraclize, an external oracle solution that delivers price information as well as SSL-based cryptographic proof that the information has not been tampered with from its source. Oraclize provides a secondary source of information regarding the market price of assets that is signed by the exchanges that run the markets.
