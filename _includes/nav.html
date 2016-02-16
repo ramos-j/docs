@@ -1,3 +1,4 @@
+<!--
 <nav class="menu menu--mkr">
     <ul class="menu__list">
     {% for link in site.navigation %}
@@ -11,3 +12,22 @@
     {% endfor %}
     </ul>
 </nav>
+-->
+
+<dl class="dropy">
+	<dt class="dropy__title"><span>{{ page.title }}</span></dt>
+		<dd class="dropy__content">
+			<ul>
+        <li><a  class="dropy__header">{{ page.title }}</a></li>
+  {% for link in site.navigation %}
+      {% assign default = nil %}
+    {% if page.url == link.url or page.layout == link.layout %}
+          {% assign default = 'default' %}
+      {% endif %}
+				<li>
+          <a class="{{ default }}" href="{{ link.url }}">{{ link.title }}</a>
+        </li>
+            {% endfor %}
+			</ul>
+		</dd>
+</dl>

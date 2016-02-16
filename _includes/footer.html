@@ -1,7 +1,9 @@
-		<script src="{{ site.baseurl }}/js/classie.js"></script>
+
+    <script src="{{ site.baseurl }}/js/main.js"></script>
+    <script src="{{ site.baseurl }}/js/classie.js"></script>
 		<script src="{{ site.baseurl }}/js/clipboard.min.js"></script>
 		<script>
-	
+
 			[].slice.call(document.querySelectorAll('.link-copy')).forEach(function(link) {
 				link.setAttribute('data-clipboard-text', location.protocol + '//' + location.host + location.pathname + '#' + link.parentNode.id);
 				new Clipboard(link);
