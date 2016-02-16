@@ -22,11 +22,11 @@ sass:
 navigation:
 
  - title: DAI credit system
-   url: /dai-credit-system/
+   url: /docs/dai-credit-system/
  - title: Keepers & Oracles
-   url: /keepers-and_oracles/
+   url: /docs/keepers-and_oracles/
  - title: Governance & Decentralization
-   url: /governance-and-decentralization/
+   url: /docs/governance-and-decentralization/
 
 # About/contact
 author:
