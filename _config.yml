@@ -21,6 +21,8 @@ sass:
 # navigation
 navigation:
 
+- title: Introduction to Maker
+   url: /
  - title: DAI credit system
    url: /docs/dai-credit-system/
  - title: Keepers & Oracles
