@@ -2,9 +2,9 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Maker</title>
- <link href="http://1makerdao.github.iohttp://1makerdao.github.io/atom.xml" rel="self"/>
- <link href="http://1makerdao.github.iohttp://1makerdao.github.io/"/>
- <updated>2016-02-17T18:15:38+01:00</updated>
+ <link href="http://1makerdao.github.iohttp://1makerdao.github.io//atom.xml" rel="self"/>
+ <link href="http://1makerdao.github.iohttp://1makerdao.github.io//"/>
+ <updated>2016-02-17T18:25:16+01:00</updated>
  <id>http://1makerdao.github.io</id>
  <author>
    <name>Rune Christensen</name>
@@ -14,7 +14,7 @@
  
  <entry>
    <title>The Dai Credit System</title>
-   <link href="http://1makerdao.github.iohttp://1makerdao.github.io/dai-credit-system.html"/>
+   <link href="http://1makerdao.github.iohttp://1makerdao.github.io//dai-credit-system.html"/>
    <updated>2016-02-07T00:00:00+01:00</updated>
    <id>http://1makerdao.github.io/dai-credit-system</id>
    <content type="html">&lt;p&gt;&lt;em&gt;The Dai is a stable, deflationary cryptocurrency that enables borrowers and lenders to transact in a credit system that is permissionless and has low risk. Dai issuers (borrowers) issue Dai by posting Bitcoin, Ether and other cryptocurrency as collateral on the Ethereum blockchain, and sell these Dai on the market to Dai holders (lenders) for liquid assets. Dai holders use the Dai as a stable cryptocurrency for trade, and to earn capital gains from its deflation. Maker is the Ethereum powered Decentralized Autonomous Organization that operates the infrastructure of the Dai Credit System, and provides default insurance to its users in exchange for an insurance fee.&lt;/em&gt;&lt;/p&gt;
@@ -184,7 +184,7 @@ Should a Collateralized Debt Position see a massive price decrease in its collat
  
  <entry>
    <title>The Dai Credit System</title>
-   <link href="http://1makerdao.github.iohttp://1makerdao.github.io/dai-whitepaper.html"/>
+   <link href="http://1makerdao.github.iohttp://1makerdao.github.io//dai-whitepaper.html"/>
    <updated>2016-02-07T00:00:00+01:00</updated>
    <id>http://1makerdao.github.io/dai-whitepaper</id>
    <content type="html">&lt;p&gt;&lt;em&gt;The Dai is a stable, deflationary cryptocurrency that enables borrowers and lenders to transact in a credit system that is permissionless and has low risk. Dai issuers (borrowers) issue Dai by posting Bitcoin, Ether and other cryptocurrency as collateral on the Ethereum blockchain, and sell these Dai on the market to Dai holders (lenders) for liquid assets. Dai holders use the Dai as a stable cryptocurrency for trade, and to earn capital gains from its deflation. Maker is the Ethereum powered Decentralized Autonomous Organization that operates the infrastructure of the Dai Credit System, and provides default insurance to its users in exchange for an insurance fee.&lt;/em&gt;&lt;/p&gt;
