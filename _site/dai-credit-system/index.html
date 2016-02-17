@@ -11,11 +11,11 @@
     
   </title>
 
-  <link rel="stylesheet" href="http://1makerdao.github.io//styles.css">
+  <link rel="stylesheet" href="http://makerdao.github.io/docs/styles.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://1makerdao.github.io//public/apple-touch-icon-precomposed.png">
-  <link rel="shortcut icon" href="http://1makerdao.github.io//public/favicon.ico">
-  <link rel="alternate" type="application/atom+xml" title="Maker" href="http://1makerdao.github.io//atom.xml">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://makerdao.github.io/docs/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="http://makerdao.github.io/docs/public/favicon.ico">
+  <link rel="alternate" type="application/atom+xml" title="Maker" href="http://makerdao.github.io/docs/atom.xml">
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 </head>
@@ -26,7 +26,7 @@
   <div class="container content">
     <header class="masthead">
       <h3 class="masthead-title">
-        <a href="http://1makerdao.github.io//" title="Home">
+        <a href="http://makerdao.github.io/docs/" title="Home">
           <p style="float:right;">
             <small>Whitepaper</small>
           </p>
@@ -41,25 +41,25 @@
         
       
         <li class="menu__item  first  ">
-            <a class="menu__link" href="/">Introduction to Maker</a>
-        </li>
-    
-        
-      
-        <li class="menu__item--current    ">
-            <a class="menu__link" href="/dai-credit-system/">DAI credit system</a>
+            <a class="menu__link" href="/docs/">Introduction to Maker</a>
         </li>
     
         
       
         <li class="menu__item    ">
-            <a class="menu__link" href="/keepers-and_oracles/">Keepers & Oracles</a>
+            <a class="menu__link" href="/docs/dai-credit-system/">DAI credit system</a>
+        </li>
+    
+        
+      
+        <li class="menu__item    ">
+            <a class="menu__link" href="/docs/keepers-and_oracles/">Keepers & Oracles</a>
         </li>
     
         
       
         <li class="menu__item    last">
-            <a class="menu__link" href="/governance-and-decentralization/">Governance & Decentralization</a>
+            <a class="menu__link" href="/docs/governance-and-decentralization/">Governance & Decentralization</a>
         </li>
     
     </ul>
@@ -75,25 +75,25 @@
       
     
 				<li>
-          <a class="" href="/">Introduction to Maker</a>
+          <a class="" href="/docs/">Introduction to Maker</a>
         </li>
             
       
     
 				<li>
-          <a class="none" href="/dai-credit-system/">DAI credit system</a>
+          <a class="" href="/docs/dai-credit-system/">DAI credit system</a>
         </li>
             
       
     
 				<li>
-          <a class="" href="/keepers-and_oracles/">Keepers & Oracles</a>
+          <a class="" href="/docs/keepers-and_oracles/">Keepers & Oracles</a>
         </li>
             
       
     
 				<li>
-          <a class="" href="/governance-and-decentralization/">Governance & Decentralization</a>
+          <a class="" href="/docs/governance-and-decentralization/">Governance & Decentralization</a>
         </li>
             
 			</ul>
@@ -115,25 +115,25 @@
 <p>The supply of Dai tokens is controlled through a decentralized issuance scheme that allows anyone to issue new Dai, while ensuring the Dai price remains stable around the target price. Issuing new Dai is done by locking collateral in a <strong>collateralized debt position</strong> (CDP) smart contract. A CDP holds <strong>issuance collateral</strong> as well as <strong>issuance debt</strong>. When a CDP issues Dai, its issuance debt is initially set equal to the amount of newly issued Dai, but increases over time as the CDP accrues an <strong>insurance fee</strong>. The collateral can be retrieved by the issuer paying down (“covering”) the issuance debt, plus the additional insurance fee, which is paid to the Maker Vault. Paying down the issuance debt and insurance fee returns the collateral to the issuer and deletes the CDP.</p>
 
 <blockquote>
-<p><em><strong>Example 1</strong>: An issuer wishes to issue 100 Dai, and locks Bitcoin with a market value of significantly more than 100 Dai (“excess collateral”) into a CDP. The insurance rate is 2% over the following year. When the issuer wants to retrieve his Bitcoin, 102 Dai are required to cover the CDP.</em></p>
+  <p><em><strong>Example 1</strong>: An issuer wishes to issue 100 Dai, and locks Bitcoin with a market value of significantly more than 100 Dai (“excess collateral”) into a CDP. The insurance rate is 2% over the following year. When the issuer wants to retrieve his Bitcoin, 102 Dai are required to cover the CDP.</em></p>
 </blockquote>
 
 <p>The Dai deflation means that the market value given in SDR of the issuance debt will also have increased over time, and issuers will need to take the deflation into consideration in addition to the insurance fee as the total effective cost of issuing the Dai. The deflation is a transfer of value from the issuer to the Dai holders (as payment for borrowing capital), and the insurance fee is a transfer of value from the issuer to Maker (as payment for insuring the collateral).</p>
 
 <blockquote>
-<p><em><strong>Example 2</strong>: An issuer issues 100 SDR worth of Dai (note: not 100 Dai) by locking 150 SDR worth of BTC into a CDP. The total effective cost of insurance and deflation over the following year is 5% relative to SDR. When the issuer wants to retrieve his BTC, 105 SDR worth of Dai is required to cover the CDP.</em></p>
+  <p><em><strong>Example 2</strong>: An issuer issues 100 SDR worth of Dai (note: not 100 Dai) by locking 150 SDR worth of BTC into a CDP. The total effective cost of insurance and deflation over the following year is 5% relative to SDR. When the issuer wants to retrieve his BTC, 105 SDR worth of Dai is required to cover the CDP.</em></p>
 </blockquote>
 
 <p>Issuing Dai can be considered as borrowing capital from the Dai Credit System. In practice the issuer is either seeking to take a leveraged long position on the asset used as collateral (margin trading), or is seeking liquidity in a hard currency (such as BTC or USD) without selling the asset used as collateral. The last example could be the case of a business collateralizing stock in order to raise short term liquidity for operational expenses. In both cases the way the issuer actually obtains the asset that he wants is by first creating the CDP with their collateral and issuing Dai, then selling the newly issued Dai on the market in exchange for their desired asset or currency. Dai holders that pay assets and currency in exchange for Dai do this in order to earn capital gains from the Dai deflation and/or use it as a stable cryptocurrency on the Ethereum blockchain.</p>
 
 <blockquote>
-<p><em><strong>Example 3</strong>: An issuer issues 100 SDR worth of Dai by posting 150 SDR worth of BTC to a CDP, and buys another 100 SDR worth of BTC with the newly issued Dai. This gives him a 1.66x exposure to BTC/SDR volatility, and he can freely transfer the 100 SDR worth of BTC, while the 150 SDR worth of BTC held in the CDP as collateral is locked until the 100 issuance debt plus insurance fee is covered.</em></p>
+  <p><em><strong>Example 3</strong>: An issuer issues 100 SDR worth of Dai by posting 150 SDR worth of BTC to a CDP, and buys another 100 SDR worth of BTC with the newly issued Dai. This gives him a 1.66x exposure to BTC/SDR volatility, and he can freely transfer the 100 SDR worth of BTC, while the 150 SDR worth of BTC held in the CDP as collateral is locked until the 100 issuance debt plus insurance fee is covered.</em></p>
 </blockquote>
 
 <p>The ownership of a CDP is transferable, but CDPs are not fungible with each other. This allows them to be used in smart contracts that can perform more complex methods of issuance involving more than one actor.</p>
 
 <blockquote>
-<p><em><strong>Example 4</strong>: An issuer uses an Ethereum contract to issue 100 SDR worth of Dai in collaboration with a counterparty that wishes to become a Dai holder. The issuer contributes 50 SDR worth of BTC while the holder contributes 100 SDR worth of BTC. The OTC contract creates a CDP and issues 100 SDR worth of Dai, and then gives the holder this newly issued Dai. The holder effectively bought 100 SDR worth Dai for 100 SDR worth of BTC. The OTC contract gives the issuer ownership of the CDP, including its 100 SDR worth of issuance debt as well as its 150 SDR worth of BTC collateral. Since he started with only 50 SDR worth of BTC he is now 3x leveraged.</em></p>
+  <p><em><strong>Example 4</strong>: An issuer uses an Ethereum contract to issue 100 SDR worth of Dai in collaboration with a counterparty that wishes to become a Dai holder. The issuer contributes 50 SDR worth of BTC while the holder contributes 100 SDR worth of BTC. The OTC contract creates a CDP and issues 100 SDR worth of Dai, and then gives the holder this newly issued Dai. The holder effectively bought 100 SDR worth Dai for 100 SDR worth of BTC. The OTC contract gives the issuer ownership of the CDP, including its 100 SDR worth of issuance debt as well as its 150 SDR worth of BTC collateral. Since he started with only 50 SDR worth of BTC he is now 3x leveraged.</em></p>
 </blockquote>
 
 <h2 id="price-stability">Price stability</h2>
@@ -165,19 +165,19 @@
 <p>The slope of the collateral curve is initially simplified to always be approximately 1, so a 1% movement in collateralization in a direction produces a corresponding 1% change in the bounty.</p>
 
 <blockquote>
-<p><em><strong>Example 5</strong>: Bitcoin has a zero point of 130%. A CDP is created with 135% collateralization. At this level of collateralization, the CDP has a bounty of -5%, and performing a forced cover that costs 100 SDR worth of Dai will only buy 95 SDR worth of BTC, giving a 5% loss (assuming that the market price of Dai is equal to the target price when the forced cover happens).</em></p>
+  <p><em><strong>Example 5</strong>: Bitcoin has a zero point of 130%. A CDP is created with 135% collateralization. At this level of collateralization, the CDP has a bounty of -5%, and performing a forced cover that costs 100 SDR worth of Dai will only buy 95 SDR worth of BTC, giving a 5% loss (assuming that the market price of Dai is equal to the target price when the forced cover happens).</em></p>
 </blockquote>
 
 <p>If the collateralization ratio of a CDP goes below the zero point, the bounty for performing a forced cover on the CDP becomes positive. At this point the forced cover is also referred to as a margin call, as it has a similar function of closing out positions that are too risky. The positive bounty will generally cause market forces to instantly margin call the CDP in order to earn the free profit from buying a larger portion of the CDPs collateral at the same price.</p>
 
 <blockquote>
-<p><em><strong>Example 6</strong>: An issuer creates a CDP with 130 SDR worth of BTC as collateral, and uses it to issue 100 SDR worth of Dai. The price of BTC subsequently falls 10%, leaving the CDP at 117% collateralization. The bounty is now +13%, and a Dai holder quickly margin calls it, paying down the 100 SDR debt and obtaining 113 SDR worth of BTC, with only 4 SDR worth of BTC remaining to be returned to the issuer.</em></p>
+  <p><em><strong>Example 6</strong>: An issuer creates a CDP with 130 SDR worth of BTC as collateral, and uses it to issue 100 SDR worth of Dai. The price of BTC subsequently falls 10%, leaving the CDP at 117% collateralization. The bounty is now +13%, and a Dai holder quickly margin calls it, paying down the 100 SDR debt and obtaining 113 SDR worth of BTC, with only 4 SDR worth of BTC remaining to be returned to the issuer.</em></p>
 </blockquote>
 
-<p>The purpose of the forced cover is to provide a buffer of liquid assets from the CDPs in case the price of Dai suddenly drops dramatically due to a shock in demand. This is because a CDP&#39;s bounty is determined in terms of the Dai target price, and the <strong>effective bounty</strong> changes in response to the market price, changing with the same magnitude but in the opposite direction of a deviation of the market price from the target price. This creates another negative feedback loop that serves to push the market price towards the target price.</p>
+<p>The purpose of the forced cover is to provide a buffer of liquid assets from the CDPs in case the price of Dai suddenly drops dramatically due to a shock in demand. This is because a CDP’s bounty is determined in terms of the Dai target price, and the <strong>effective bounty</strong> changes in response to the market price, changing with the same magnitude but in the opposite direction of a deviation of the market price from the target price. This creates another negative feedback loop that serves to push the market price towards the target price.</p>
 
 <blockquote>
-<p><em><strong>Example 7</strong>: Consider the scenario where there are active Bitcoin CDPs at 135% collateralization and a large Dai selloff suddenly occurs. If the Dai market price deviates more than 5% below the target price, the effective bounty of all CDPs will increase by more than 5%. Thus a CDP with 135% or lower collateralization which have a nominal bounty of -5%, will see their effective bounty hit 0% or higher, causing them to be margin called by profit seeking traders. This causes the supply of Dai to decrease and creates positive pressure on the Dai market price, pushing it upwards.</em></p>
+  <p><em><strong>Example 7</strong>: Consider the scenario where there are active Bitcoin CDPs at 135% collateralization and a large Dai selloff suddenly occurs. If the Dai market price deviates more than 5% below the target price, the effective bounty of all CDPs will increase by more than 5%. Thus a CDP with 135% or lower collateralization which have a nominal bounty of -5%, will see their effective bounty hit 0% or higher, causing them to be margin called by profit seeking traders. This causes the supply of Dai to decrease and creates positive pressure on the Dai market price, pushing it upwards.</em></p>
 </blockquote>
 
 <p>Forced covers and the collateral curve has a different effect on the market price when the market price deviates above the target price. The zero point of a collateral type is also the minimum initial collateralization requirement for issuing new Dai, but like the bounty this collateralization requirement is calculated in the target price. Thus, when the market price increases, the effective collateral requirement for issuing Dai go down, which in turn increases demand for issuance, increasing supply of Dai, which pushes the price down in the direction of the target price.</p>
@@ -218,15 +218,15 @@ Should a Collateralized Debt Position see a massive price decrease in its collat
     <footer class="footer">
       <small>
         &copy;
-        <time datetime="2016-02-17T18:25:16+01:00">2016</time>. All rights reserved. <b>MakerDAO</b>
+        <time datetime="2016-02-17T18:45:49+01:00">2016</time>. All rights reserved. <b>MakerDAO</b>
       </small>
     </footer>
   </div>
 
   
-    <script src="http://1makerdao.github.io//js/main.js"></script>
-    <script src="http://1makerdao.github.io//js/classie.js"></script>
-		<script src="http://1makerdao.github.io//js/clipboard.min.js"></script>
+    <script src="http://makerdao.github.io/docs/js/main.js"></script>
+    <script src="http://makerdao.github.io/docs/js/classie.js"></script>
+		<script src="http://makerdao.github.io/docs/js/clipboard.min.js"></script>
 		<script>
 
 			[].slice.call(document.querySelectorAll('.link-copy')).forEach(function(link) {
