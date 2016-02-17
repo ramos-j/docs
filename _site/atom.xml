@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Maker</title>
- <link href="http://makerdao.github.io/docshttp://makerdao.github.io/docs/atom.xml" rel="self"/>
- <link href="http://makerdao.github.io/docshttp://makerdao.github.io/docs/"/>
- <updated>2016-02-17T18:45:49+01:00</updated>
- <id>http://makerdao.github.io/docs</id>
+ <link href="http://makerdao.github.dev/http://makerdao.github.dev//atom.xml" rel="self"/>
+ <link href="http://makerdao.github.dev/http://makerdao.github.dev//"/>
+ <updated>2016-02-17T19:05:57+01:00</updated>
+ <id>http://makerdao.github.dev/</id>
  <author>
    <name>Rune Christensen</name>
    <email>rune@makedao.com</email>
