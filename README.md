@@ -22,16 +22,12 @@ documentation that doesn't belong somewhere more specific
 $ bundle install
 ```
 
-**Windows users:** Windows users have a bit more work to do, but luckily [@juthilo](https://github.com/juthilo) has your back with his [Run Jekyll on Windows](https://github.com/juthilo/run-jekyll-on-windows) guide.
-
-**Need syntax highlighting?** Poole includes support for Pygments or Rouge, so install your gem of choice to make use of the built-in styling. Read more about this [in the Jekyll docs](http://jekyllrb.com/docs/templates/#code_snippet_highlighting).
-
 
 ## Development
 
 ### Running locally
 
-To see your Jekyll site with Poole applied, start a Jekyll server. In Terminal, from `/poole` (or whatever your Jekyll site's root directory is named):
+To see your Jekyll site with Poole applied, start a Jekyll server. In Terminal, from `/docs` (or whatever your Jekyll site's root directory is named):
 
 ```bash
 $ jekyll serve
