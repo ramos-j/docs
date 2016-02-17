@@ -1,44 +1,33 @@
 ---
-layout: post
-title: The Dai Credit System
+permalink: /dai-whitepaper/
+layout: page
+title:  Dai Whitepaper 0.3
 subtitle: Decentralized, autonomous and insured by Maker
 
 ---
 
-#####Version 0.3 – 2016-01-31
-
-
-
-
-
-
+##### Version 0.3 – 2016-02-12
 
 
 *The Dai is a stable, deflationary cryptocurrency that enables borrowers and lenders to transact in a credit system that is permissionless and has low risk. Dai issuers (borrowers) issue Dai by posting Bitcoin, Ether and other cryptocurrency as collateral on the Ethereum blockchain, and sell these Dai on the market to Dai holders (lenders) for liquid assets. Dai holders use the Dai as a stable cryptocurrency for trade, and to earn capital gains from its deflation. Maker is the Ethereum powered Decentralized Autonomous Organization that operates the infrastructure of the Dai Credit System, and provides default insurance to its users in exchange for an insurance fee.*
 
 
 
+## Glossary of terms
 
-
-
-
-
-
-##Glossary of terms
-| | |
-| --- | --- |
-| **Dai** | An Ethereum based cryptocurrency with short term price stability and long term price deflation |
-| **Dai collateral** | Assets that can be locked cryptographically on the Ethereum blockchain |
-| **Dai issuer** | A person who borrows money from the Dai Credit System by posting collateral |
-| **Dai holder** | A person who lends money to the Dai Credit System and earns capital gains from Dai deflation |
-| **Maker** | Decentralized Autonomous Organization (DAO) operating the Dai Credit System infrastructure on the Ethereum blockchain |
-| **MKR** | A cryptocurrency that insures the collateralization of the Dai |
-| **SDR** | Special Drawing Right, a currency basket maintained by the International Monetary Fund |
+| --- | ---
+| **Dai** | An Ethereum based cryptocurrency with short term price stability and long term price deflation
+| **Dai collateral** | Assets that can be locked cryptographically on the Ethereum blockchain
+| **Dai issuer** | A person who borrows money from the Dai Credit System by posting collateral
+| **Dai holder** | A person who lends money to the Dai Credit System and earns capital gains from Dai deflation
+| **Maker** | Decentralized Autonomous Organization (DAO) operating the Dai Credit System infrastructure on the Ethereum blockchain
+| **MKR** | A cryptocurrency that insures the collateralization of the Dai
+| **SDR** | Special Drawing Right, a currency basket maintained by the International Monetary Fund
 | **BTC** | Bitcoin, the first cryptocurrency
 
 
 
-##Value proposition
+## Value proposition
 
 **Dai issuers use the Dai** to borrow money instantly and without any requirements beyond posting adequate collateral. There are no term limits, and debt positions can opened and covered at any time. This means the Dai can service most types of credit demand, including margin trading and business credit.
 
@@ -46,12 +35,12 @@ subtitle: Decentralized, autonomous and insured by Maker
 
 **MKR owners gain value from the Dai** because MKR represents the ownership of Makers insurance service. Dai issuers pay an insurance fee on the Dai, and Maker steadily funnels this income to MKR owners by buying and permanently destroying MKR supply, thus decreasing the supply and increasing market price. In return Maker is forced to bail out bad debt in the event of a sudden collateral crash (a so-called black swan event). If Maker does not have enough assets on hand to immediately cover all bad debt, the MKR supply is automatically inflated and sold off to raise funds in order to cover all the bad debt over time. As a result MKR owners are exposed to both the profits and the risk of Makers insurance service.
 
-##Note on oracles, governance and roadmap
+## Note on oracles, governance and roadmap
 
 This document describes only the economic mechanisms of the fully implemented Dai Credit System. The Maker Prospectus (will be released soon) contains information about crucial supporting features such as the price feed oracles that deliver data to the blockchain, the governance scheme of the Maker DAO, as well as the current planned long term design roadmap for Maker from deployment to widespread adoption.
 
-##How it works
-###Issuance and supply
+## How it works
+### Issuance and supply
 
 The Dai is a cryptocurrency on the Ethereum blockchain. Any Ethereum account can hold Dai, and can transfer it freely to other Ethereum accounts.
 
@@ -73,11 +62,11 @@ The ownership of a CDP is transferable, but CDPs are not fungible with each othe
 
 >*__Example 4__: An issuer uses an Ethereum contract to issue 100 SDR worth of Dai in collaboration with a counterparty that wishes to become a Dai holder. The issuer contributes 50 SDR worth of BTC while the holder contributes 100 SDR worth of BTC. The OTC contract creates a CDP and issues 100 SDR worth of Dai, and then gives the holder this newly issued Dai. The holder effectively bought 100 SDR worth Dai for 100 SDR worth of BTC. The OTC contract gives the issuer ownership of the CDP, including its 100 SDR worth of issuance debt as well as its 150 SDR worth of BTC collateral. Since he started with only 50 SDR worth of BTC he is now 3x leveraged.*
 
-###Price stability
+### Price stability
 
 The stability of the Dai around the target price is maintained using **deflation rate adjustment** to continuously match demand between holders and issuers, while the **forced cover** mechanism directly enforces the target price in the markets using collateral from CDPs, as well as ensuring short term liquidity and price support in the face of Dai demand shocks.
 
-####Long term price stability
+#### Long term price stability
 
 Deflation rate adjustments ensure that the Dai market price remains stabilized around the target price.
 
@@ -87,7 +76,7 @@ The same mechanism works in reverse if the market price is higher than the targe
 
 This mechanism can be considered a negative feedback loop. A deviation of the market price away from the target price will trigger a push in the opposite direction, towards the target price. The magnitude of the deflation rate adjustments depend on how strongly the market price deviates from the target price; very strong deviations result in bigger adjustments whereas small deviations result in very small adjustments.
 
-####Short term liquidity and price support
+#### Short term liquidity and price support
 
 To directly enforce the target price in the Dai markets and to counteract demand shocks, a secondary stability mechanism exists: the forced cover.
 
@@ -113,7 +102,7 @@ The purpose of the forced cover is to provide a buffer of liquid assets from the
 
 Forced covers and the collateral curve has a different effect on the market price when the market price deviates above the target price. The zero point of a collateral type is also the minimum initial collateralization requirement for issuing new Dai, but like the bounty this collateralization requirement is calculated in the target price. Thus, when the market price increases, the effective collateral requirement for issuing Dai go down, which in turn increases demand for issuance, increasing supply of Dai, which pushes the price down in the direction of the target price.
 
-###Undercollateralization
+### Undercollateralization
 
 The biggest risk to the stable value of the Dai is the risk of CDP undercollateralization.
 Should a Collateralized Debt Position see a massive price decrease in its collateral to the point where its collateralization ratio falls below 100%, there would no longer be enough collateral in the position to buy back all the Dai it originally issued (plus insurance fee). If such undercollateralization events were left unchecked and allowed to happen to a significant amount of the outstanding CDPs, it could destroy confidence in the Dai and break its stability. Widespread, sudden undercollateralization that happens too fast to be mitigated by margin calls is also referred to as a **black swan event**.
@@ -130,14 +119,14 @@ Instead, Maker will autonomously perform a Maker bailout, using funds from the M
 
 **The function of MKR**:  Ultimately it is the market value of MKR that insures the collateral of the Dai Credit System, and the price of MKR is directly exposed to the risk of the system. To compensate MKR owners for taking on this risk, during times of stability where there is no outstanding emergency debt, the Dai held in the Maker Vault is slowly sold off for MKR, and the obtained MKR is then permanently destroyed, in an automatic process called buy & burn. The rate at which the buy & burn happens is determined by MKR holders through voting. The result is that, in the absence of undercollateralization events, the supply of MKR is decreasing over time, which causes its price to increase.
 
-###Collateral requirements and debt ceilings
+### Collateral requirements and debt ceilings
 
 There are two primary factors that determine the risk of a given collateral type: Market depth and volatility. While these two factors are related - more market depth means less volatility - they still contribute separately to the overall risk and are thus each managed with a separate mechanisms.
 
-####Market depth risk management
+#### Market depth risk management
 
 The impact of market depth on the risk of a collateral type is managed through the **debt ceiling**. Each collateral type has an individual debt ceiling. The debt ceiling is the maximum amount of issuance debt that can be held in CDPs that use the same type of collateral. Once the debt ceiling for a collateral type has been reached, no more Dai can be issued using the asset as collateral, until existing CDPs using the asset are covered. New Dai can still be issued using a different asset as collateral.
 
-####Volatility risk management
+#### Volatility risk management
 
 Volatility of the various collateral types is managed through the collateral curve, which is defined by the zero point. The zero point is set so there is a sufficient buffer of collateralization at which CDPs using the collateral will have a positive bounty and thus get margin called, in order for them to withstand the highest volatility observed for the asset under normal conditions. This means more volatile assets will have higher zero points, allowing for less leverage by issuers, and less volatile assets will have lower zero points, allowing for more leverage.
