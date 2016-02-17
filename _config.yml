@@ -4,9 +4,9 @@ permalink:           none
 # Setup
 title:               Maker
 tagline:             Whitepaper
-url:                 http://1makerdao.github.io
+url:                 http://makerdao.github.io
 paginate:            1
-baseurl:             "http://1makerdao.github.io"
+baseurl:             "http://makerdao.github.io"
 
 # Assets
 #
@@ -22,13 +22,13 @@ sass:
 navigation:
 
  - title: Introduction to Maker
-   url: /
+   url: /docs/
  - title: DAI credit system
-   url: /dai-credit-system/
+   url: /docs/dai-credit-system/
  - title: Keepers & Oracles
-   url: /keepers-and_oracles/
+   url: /docs/keepers-and_oracles/
  - title: Governance & Decentralization
-   url: /governance-and-decentralization/
+   url: /docs/governance-and-decentralization/
 
 # About/contact
 author:
