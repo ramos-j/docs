@@ -32,8 +32,9 @@ $borderRadius: 0.2rem;
   float: right;
   list-style: none;
   margin: 0;
+  color: lighten($mkr-dark, 40%);;
   a {
-    color: $mkr-dark;
+    color: lighten($mkr-dark, 40%);;
   }
   li {
     float: left;
