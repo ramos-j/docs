@@ -5,7 +5,7 @@ title: Introduction to Maker
 ---
 
 
-##Bitcoin and blockchain technology
+## Bitcoin and blockchain technology
 
 Blockchain technology started with Bitcoin, a cryptographically secured, decentralized digital currency. Bitcoin's unique properties gave it a number of advantages that made it extremely useful for some types of international and internet-based transactions. However, its experimental nature has led to a number of issues including high price volatility, and high cash burn for its proof-of-work based security mechanism.
 
@@ -15,7 +15,7 @@ Smart contracts enable a wide range of new use cases for blockchain technology. 
 
 In addition to DAOs and many other completely new use cases, smart contracts also greatly enhance the capabilities of cryptocurrencies beyond bitcoin and other first generation cryptocurrencies. Smart contracts enable complex behaviour, such as autonomous monetary policy that counteracts volatility, and decentralized insurance.
 
-##Introducing Maker
+## Introducing Maker
 
 Maker is a DAO based on the Ethereum blockchain, where it maintains the infrastructure for the Dai - a cryptocurrency that uses smart contract enforced monetary policy to create price stability.
 
@@ -25,7 +25,7 @@ Maker is able to maintain the price stability of the Dai through the Dai Credit 
 
 The Maker DAO is owned by the people who bought its core token (called MKR) during the development of the system. This token is also a cryptocurrency like the Dai, but does not have price stability and is highly speculative and volatile. Its function is to provide deposit insurance to the users of the Dai, as well as regulate the risk of the Dai Credit System as a whole. Maker doesn't have a legal entity or any representation in the legal world, as the entirety of the organizations business logic is fully automated and executed on the Ethereum Blockchain.
 
-##The three types of users of the Dai Credit System
+## The three types of users of the Dai Credit System
 
 **Dai issuers use the Dai** to borrow money instantly and without any requirements beyond posting adequate collateral. There are no term limits, and debt positions can opened and covered at any time. This means the Dai can service most types of credit demand, including margin trading and business credit.
 

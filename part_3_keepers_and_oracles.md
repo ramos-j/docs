@@ -4,7 +4,7 @@ layout: page
 title: Keepers and oracles
 ---
 
-##Keepers
+## Keepers
 
 The mechanics of the Dai Credit System relies on rational actors to interact and trade with the system in a way that is profitable to themselves, such as when margin calling CDPs with low collateral. Traders that systematically earn an income from the Dai Credit System by exploiting such opportunities are called **Keepers**. Generalized, a Keeper is an economic agent that contributes to a decentralized system in exchange for built-in rewards. Specifically for Maker this means performing several important functions:
 
@@ -16,7 +16,7 @@ The mechanics of the Dai Credit System relies on rational actors to interact and
 
 To make it easy for anyone to act as a keeper, Maker funds the development of the open source Keeper software stack, which enables anyone to run a server that acts a trading bot and oracle tool to perform the above mentioned functions. It is designed to be run on a small device, such as the Ethereum Computer or a regular raspberry pi.
 
-##Oracles
+## Oracles
 
 Another crucial group of external actors that the Dai Credit System requires to function are price feed oracles. Oracles are mechanisms that provide information from the outside world onto a blockchain for smart contracts to consume. For Maker this means price information regarding the market price of the Dai, to determine if it is deviating from the Target Price, as well as information about the market price of the assets used as collateral for the Dai, to determine the bounty for forced covers on CDPs, and when a Maker bailout can be triggered.
 
