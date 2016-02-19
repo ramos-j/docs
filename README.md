@@ -7,13 +7,6 @@
 documentation that doesn't belong somewhere more specific
 
 
-## Contents
-
-- [Usage](#usage)
-- [Development](#development)
-- [Contributing](#Contribute)
-
-
 ## Usage
 
 ### Install dependencies
