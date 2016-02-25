@@ -18,9 +18,9 @@ To make it easy for anyone to act as a keeper, Maker funds the development of th
 
 ## Oracles
 
-Another crucial group of external actors that the Dai Credit System requires to function are price feed oracles. Oracles are mechanisms that provide information from the outside world onto a blockchain for smart contracts to consume. For Maker this means price information regarding the market price of the Dai, to determine if it is deviating from the Target Price, as well as information about the market price of the assets used as collateral for the Dai, to determine the bounty for forced covers on CDPs, and when a Maker bailout can be triggered.
+Another crucial group of external actors that the Dai Credit System requires to function are price feed oracles. Oracles are mechanisms that provide information from the outside world onto a blockchain for smart contracts to consume. For Maker this means price information regarding the market price of the Dai, to determine if it is deviating from the Target Price, as well as information about the market price of the assets used as collateral for the Dai, to determine the bounty for forced covers on CDPs and when a Maker bailout can be triggered.
 
-As smart contracts are unable to verify external data on their own, oracles are often the weakest and most easily attacked part of a DAO. Maker employs mechanisms to reduce **oracle risk**, the risk of oracles providing incorrect information to the detriment of the system. Most importantly, Maker uses multiple redundant oracle systems to deliver its price information, which are processed in the Oracle Repeater to enable Maker to function normally even if one or more of the oracle systems are providing incorrect information.
+As smart contracts are unable to verify external data on their own, oracles are often the weakest and most easily attacked part of a DAO. Maker employs mechanisms to reduce **oracle risk**, the risk of oracles providing incorrect information to the detriment of the system. Most importantly, Maker uses multiple redundant oracle systems to deliver its price information, which are processed by Maker to enable the system to function normally even if one or more of the oracle systems are providing incorrect information.
 
 Maker will initially use these oracle systems:
 
