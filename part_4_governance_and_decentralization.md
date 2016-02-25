@@ -6,13 +6,13 @@ title: Governance and decentralization
 
 ## Authority in Decentralized Autonomous Organizations
 
-Authority in DAOs work differently than in traditional organizations. It is entirely explicit, and direct, in the sense that if an entity has the authority to spend funds from the DAO or change a variable in the business logic, the ability to do so is direct, meaning it can be done by sending a transaction to a smart contract on the blockchain, and the action will immediately happen unless the DAO has rules in place to delay it. A DAO can be fully modifiable, meaning that its authority can change any part of its smart contracts and business logic, or it can be restricted, with parts of its infrastructure permanently locked down and unmodifiable, even by the DAOs authority. Restricted authority is useful to help users trust that the DAO will not suddenly alter its service in a detrimental way, or steal their funds.
+Authority in DAOs work differently than in traditional organizations. It is entirely explicit, and direct, in the sense that if an entity has the authority to spend funds from the DAO or change a variable in the business logic it can be done by sending a transaction to a smart contract on the blockchain, and the action will immediately happen (except in cases where the DAO has rules in place to delay it). A DAO can be fully modifiable, meaning that its authority can change any part of its smart contracts and business logic, or it can be restricted, with parts of its infrastructure permanently locked down and unmodifiable, even by the DAOs authority. Restricted authority is useful to help users trust that the DAO will not suddenly alter its service in a detrimental way, or steal their funds.
 
-In the Maker DAO, the highest authority to modify and control the system resides with the owners of the MKR token, the Maker shareholders. The power is exercised through the shareholders voting on actions, with each MKR giving one vote. A simple majority vote is able to change the voting rules, execute an action by the DAO, or permanently restrict the DAO authority.
+In the Maker DAO, the highest authority to modify and control the system resides with the owners of the MKR token, the Maker shareholders. The power is exercised through the shareholders voting on actions, with each MKR giving one vote. A simple majority vote is able to change the voting rules, altering the business logic, spending funds, or permanently restricting the DAO authority.
 
 ## Governance processes in Maker
 
-To allow shareholders to coordinate their votes and discuss which regulatory and business strategy to implement, a weekly governance meeting is held as a conference call using the teamspeak platform. While initiating proposals and voting on them can be done at any time, the framework of the governance meeting makes it easier for shareholders to do so in an organized and systematic fashion.
+To allow shareholders to coordinate their votes and discuss regulatory and business strategies, a weekly governance meeting is held as a conference call using the teamspeak platform. While initiating proposals and voting on them can be done at any time, the framework of the governance meeting makes it easier for shareholders to do so in an organized and systematic fashion.
 
 The Maker Slack channel functions as the primary communications platform, upon which the governance meeting is scheduled and shareholders can discuss any and all aspects of the DAO and its governance.
 
@@ -30,7 +30,7 @@ During the Dai Alpha, the Dai Credit System will not be fully implemented in a d
 
 There are several phases after the Dai alpha that will be implemented in discrete steps in the following order.
 
-**Decentralized CDP engine**. When it is deployed CDPs will no longer have to be created manually, and users can issue Dai directly by interacting with the CDP engine smart contracts on the blockchain. The CDP engine will not have Maker Insurance so the stability of the Dai will not be as strong as with the full implementation of the Dai Credit System As there is still no MKR voting when the CDP engine is implemented, the Alpha Dynasty will still be Makers authority and shareholders and users will need to trust them.
+**Decentralized CDP engine**. When it is deployed CDPs will no longer have to be created manually, and users can issue Dai directly by interacting with the CDP engine smart contracts on the blockchain. The CDP engine will not have Maker Insurance so the stability of the Dai will not be as strong as with the full implementation of the Dai Credit System. As there is still no MKR voting when the CDP engine is implemented, the Alpha Dynasty will still be Makers authority and shareholders and users will need to trust them.
 
 **MKR voting**. This feature will allow shareholders to fully control the Maker DAO by proposing actions and voting on their execution through a user interface. With this implemented the Alpha Dynasty will no longer be necessary and Maker will have decentralized governance.
 

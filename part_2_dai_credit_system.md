@@ -73,15 +73,23 @@ Should a Collateralized Debt Position see a massive price decrease in its collat
 
 To ensure the stability of the Dai under all circumstances, Maker provides the service of Maker Insurance, which shields the Dai Credit System from the losses of black swan events by transferring the loss to MKR holders through three mechanisms: **Maker bailout**, **emergency debt** and **forced MKR inflation**.
 
-**Maker bailout**: Despite the massive profit incentive for traders to perform margin calls once the collateralization of a position falls just a few percentage points below its zero point (giving it a positive bounty), there is still a risk of one or more CDPs becoming undercollateralized if the crash happens very quickly. Once a CDP becomes undercollateralized and has less collateral value than it has debt, there is no longer a profit incentive for traders to margin call it.
+###Maker bailout
+
+Despite the massive profit incentive for traders to perform margin calls once the collateralization of a position falls just a few percentage points below its zero point (giving it a positive bounty), there is still a risk of one or more CDPs becoming undercollateralized if the crash happens very quickly. Once a CDP becomes undercollateralized and has less collateral value than it has debt, there is no longer a profit incentive for traders to margin call it.
 
 Instead, Maker will autonomously perform a Maker bailout, using funds from the Maker vault, (Makers Dai account). The Maker vault receives the insurance fees paid out from CDPs when they are covered and thus always has a pool of funds readily available to perform Maker bailouts.
 
-**Emergency debt**:Should many CDPs become simultaneously undercollateralized to the point where there isn’t enough Dai in the Maker vault to bail them out, Maker automatically issues Dai backed by emergency debt and uses that to perform the Maker bailouts. Emergency debt doesn’t require collateral but is backed by the ability of Maker to inflate the MKR supply. There is also no limit to the amount of emergency debt that can be issued, and it will always correspond to the combined debt of the CDPs that were undercollateralized when the emergency debt was initially triggered.
+###Emergency debt
 
-**Forced MKR inflation**: Once Maker assumes emergency debt, forced MKR inflation gets triggered. The inflation is continuous at a rate that corresponds to a 100% increase of the MKR supply per year. The inflated MKR is automatically sold off for Dai, which is then used to pay down and remove the emergency debt. The forced inflation continues until all emergency debt is paid down and the system returns to normal.
+Should many CDPs become simultaneously undercollateralized to the point where there isn’t enough Dai in the Maker vault to bail them out, Maker automatically issues Dai backed by emergency debt and uses that to perform the Maker bailouts. Emergency debt doesn’t require collateral but is backed by the ability of Maker to inflate the MKR supply. There is also no limit to the amount of emergency debt that can be issued, and it will always correspond to the combined debt of the CDPs that were undercollateralized when the emergency debt was initially triggered.
 
-**The function of MKR**:  Ultimately it is the market value of MKR that insures the collateral of the Dai Credit System, and the price of MKR is directly exposed to the risk of the system. To compensate MKR owners for taking on this risk, during times of stability where there is no outstanding emergency debt, the Dai held in the Maker Vault is slowly sold off for MKR, and the obtained MKR is then permanently destroyed, in an automatic process called buy & burn. The rate at which the buy & burn happens is determined by MKR holders through voting. The result is that, in the absence of undercollateralization events, the supply of MKR is decreasing over time, which causes its price to increase.
+###Forced MKR inflation
+
+Once Maker assumes emergency debt, forced MKR inflation gets triggered. The inflation is continuous at a rate that corresponds to a 100% increase of the MKR supply per year. The inflated MKR is automatically sold off for Dai, which is then used to pay down and remove the emergency debt. The forced inflation continues until all emergency debt is paid down and the system returns to normal.
+
+###The function of MKR
+
+Ultimately it is the market value of MKR that insures the collateral of the Dai Credit System, and the price of MKR is directly exposed to the risk of the system. To compensate MKR owners for taking on this risk, during times of stability where there is no outstanding emergency debt, the Dai held in the Maker Vault is slowly sold off for MKR, and the obtained MKR is then permanently destroyed, in an automatic process called buy & burn. The rate at which the buy & burn happens is determined by MKR holders through voting. The result is that, in the absence of undercollateralization events, the supply of MKR is decreasing over time, which causes its price to increase.
 
 ## Collateral requirements and debt ceilings
 
