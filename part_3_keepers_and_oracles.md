@@ -24,6 +24,6 @@ As smart contracts are unable to verify external data on their own, oracles are 
 
 Maker will initially use these oracle systems:
 
-* Keeper, as Makers in house oracle solution this type of oracle is chosen by MKR owners through Makers regular governance mechanisms. Keeper oracles will be cheap to run, and a large of them can provide data together, giving a high level of redundancy and decentralization.
+* Keeper, as Makers in house oracle solution this type of oracle is chosen by MKR owners through Makers regular governance mechanisms. Keeper oracles will be cheap to run, and a large amount of them can provide data together as a swarm, giving a high level of redundancy and decentralization.
 
-* Oraclize, an external oracle solution that delivers price information as well as SSL-based cryptographic proof that the information has not been tampered with from its source. Oraclize provides a secondary source of information regarding the market price of assets that is signed by the exchanges that run the markets.
+* Oraclize, an external oracle solution that delivers price information as well as SSL-based cryptographic proof that the information has not been tampered with from its source. Oraclize provides a secondary source of information regarding the market price of assets signed directly by the exchanges.
