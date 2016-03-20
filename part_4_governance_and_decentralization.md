@@ -42,7 +42,6 @@ There are several phases after the Dai alpha that will be implemented in discret
 
 In beginning of the Dai Credit System its risk parameters and monetary policy will be controlled on a day to day basis by a dynasty, a group of people having central control over the system but supervised by MKR shareholders and with restricted permissions. In the long run the day to day governance of the system will be managed by decentralized prediction markets according to the concepts of futarchy governance. This way Maker will be fully governed by the free market down the level of day to day decisions.
 
-
 [//]: <> Pagination - quick & dirty
 [//]: <> // TODO Pagination
 
@@ -50,4 +49,3 @@ In beginning of the Dai Credit System its risk parameters and monetary policy wi
     <a class="pagination-item older" href="/keepers-and-oracles/">Part 3</a>
     <a class="pagination-item newer" href="/mkr-distribution-and-the-mkr-fund/">Part 5</a>
 </div>
-
