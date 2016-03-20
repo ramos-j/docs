@@ -6,7 +6,7 @@ title:               Maker
 tagline:             Whitepaper
 url:                 https://makerdao.github.io/docs
 paginate:            1
-baseurl:             "https://makerdao.github.io/docs"
+baseurl:             https://makerdao.github.io/docs
 
 # Assets
 #
