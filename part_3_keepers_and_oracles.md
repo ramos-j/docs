@@ -27,3 +27,12 @@ Maker will initially use these oracle systems:
 * Keeper, as Makers in house oracle solution this type of oracle is chosen by MKR owners through Makers regular governance mechanisms. Keeper oracles will be cheap to run, and a large amount of them can provide data together as a swarm, giving a high level of redundancy and decentralization.
 
 * Oraclize, an external oracle solution that delivers price information as well as SSL-based cryptographic proof that the information has not been tampered with from its source. Oraclize provides a secondary source of information regarding the market price of assets signed directly by the exchanges.
+
+[//]: <> Pagination - quick & dirty
+[//]: <> // TODO Pagination
+
+
+<div class="pagination">
+    <a class="pagination-item older" href="/dai-credt-system/">Part 2</a>
+    <a class="pagination-item newer" href="/governance-and-decentralization/">Part 4</a>
+</div>
