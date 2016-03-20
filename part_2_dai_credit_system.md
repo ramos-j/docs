@@ -102,3 +102,13 @@ The impact of market depth on the risk of a collateral type is managed through t
 ### Volatility risk management
 
 Volatility of the various collateral types is managed through the collateral curve, which is defined by the zero point. The zero point is set so there is a sufficient buffer of collateralization at which CDPs using the collateral will have a positive bounty and thus get margin called, in order for them to withstand the highest volatility observed for the asset under normal conditions. This means more volatile assets will have higher zero points, allowing for less leverage by issuers, and less volatile assets will have lower zero points, allowing for more leverage.
+
+
+[//]: <> Pagination - quick & dirty
+[//]: <> // TODO Pagination
+
+<div class="pagination">
+    <a class="pagination-item older" href="/">Part 1</a>
+    <a class="pagination-item newer" href="/keepers-and_oracles/">Part 3</a>
+</div>
+
