@@ -38,6 +38,6 @@ The Maker DAO is owned by the people who bought its core token (called MKR) duri
 
 <div class="pagination">
     <span class="pagination-item older">Part 1</span>
-    <a class="pagination-item newer" href="/dai-credit-system/">Part 2</a>
+    <a class="pagination-item newer" href="/docs/dai-credit-system/">Part 2</a>
 </div>
 

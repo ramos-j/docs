@@ -33,6 +33,12 @@ Maker will initially use these oracle systems:
 
 
 <div class="pagination">
+<<<<<<< HEAD
     <a class="pagination-item older" href="/dai-credt-system/">Part 2</a>
     <a class="pagination-item newer" href="/governance-and-decentralization/">Part 4</a>
 </div>
+=======
+    <a class="pagination-item older" href="/docs/dai-credt-system/">Part 2</a>
+    <a class="pagination-item newer" href="/docs/governance-and-decentralization/">Part 4</a>
+</div>
+>>>>>>> master
