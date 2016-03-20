@@ -108,5 +108,5 @@ Volatility of the various collateral types is managed through the collateral cur
 
 <div class="pagination">
     <a class="pagination-item older" href="/">Part 1</a>
-    <a class="pagination-item newer" href="/keepers-and_oracles/">Part 3</a>
+    <a class="pagination-item newer" href="/docs/keepers-and_oracles/">Part 3</a>
 </div>

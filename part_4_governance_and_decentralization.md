@@ -46,6 +46,6 @@ In beginning of the Dai Credit System its risk parameters and monetary policy wi
 [//]: <> // TODO Pagination
 
 <div class="pagination">
-    <a class="pagination-item older" href="/keepers-and-oracles/">Part 3</a>
-    <a class="pagination-item newer" href="/mkr-distribution-and-the-mkr-fund/">Part 5</a>
+    <a class="pagination-item older" href="/docs/keepers-and-oracles/">Part 3</a>
+    <a class="pagination-item newer" href="/docs/mkr-distribution-and-the-mkr-fund/">Part 5</a>
 </div>
