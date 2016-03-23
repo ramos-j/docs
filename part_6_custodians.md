@@ -4,9 +4,9 @@
 
 Custodians are legal entities (incorporated companies), registered in national jurisdictions around the world, that perform vital functions to ensure the stability and economic efficiency of the Dai Credit System.
 
-At its core, a Custodian is an entity that has special issuance privileges given to it by the Maker governance process. These issuance privileges mean that a Custodian can collateralize its dai issuance based on internally held collateral (i.e. held on the company’s books and accounts) rather than held as locked collateral on the Ethereum blockchain.
+At its core, a Custodian is an entity that has special issuance privileges given to it by the Maker governance process. These issuance privileges mean that a Custodian can back its dai issuance with internally held collateral (i.e. held on the company’s books and accounts) rather than held as locked collateral on the Ethereum blockchain.
 
-This can be done in an cryptoeconomically secure manner based on the Maker Governance Process enforcing four main requirements:
+This can be done in an cryptoeconomically secure manner based on the Maker Governance Process enforcing five main requirements:
 
 ###Reserve Buffer
 
