@@ -29,6 +29,10 @@ navigation:
    url: /docs/keepers-and_oracles/
  - title: Governance and decentralization
    url: /docs/governance-and-decentralization/
+ - title: MKR distribution and the MKR fund
+   url: /docs/mkr-distribution-and-the-mkr-fund/
+ - title: Custodians
+   url: /docs/custodians/
 
 # About/contact
 author:

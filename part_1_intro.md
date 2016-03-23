@@ -33,8 +33,6 @@ The Maker DAO is owned by the people who bought its core token (called MKR) duri
 
 **MKR owners gain value from the Dai** because MKR represents the ownership of Makers insurance service. Dai issuers pay an insurance fee on the Dai which is funneled to the owners of MKR. In return Maker is forced to bail out bad debt in the event of a sudden collateral crash (a so-called black swan event). If Maker does not have enough assets on hand to immediately cover all bad debt, the MKR supply is automatically inflated and sold off to raise funds in order to cover all the bad debt over time. As a result, MKR owners are exposed to both the profits and the risk of Makers insurance service.
 
-[//]: <> Pagination - quick & dirty
-[//]: <> // TODO Pagination
 
 <div class="pagination">
     <span class="pagination-item older">Part 1</span>

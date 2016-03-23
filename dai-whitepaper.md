@@ -15,6 +15,7 @@ subtitle: Decentralized, autonomous and insured by Maker
 
 ## Glossary of terms
 
+<<<<<<< HEAD:dai-whitepaper.md
 | --- | ---
 | **Dai** | An Ethereum based cryptocurrency with short term price stability and long term price deflation
 | **Dai collateral** | Assets that can be locked cryptographically on the Ethereum blockchain
@@ -23,30 +24,57 @@ subtitle: Decentralized, autonomous and insured by Maker
 | **Maker** | Decentralized Autonomous Organization (DAO) operating the Dai Credit System infrastructure on the Ethereum blockchain
 | **MKR** | A cryptocurrency that insures the collateralization of the Dai
 | **SDR** | Special Drawing Right, a currency basket maintained by the International Monetary Fund
+=======
+
+*The Dai is a stable deflationary cryptocurrency that enables borrowers and lenders to transact in a credit system that is permissionless and has low risk. Dai issuers (borrowers) issue Dai by posting Bitcoin, Ether, and other cryptocurrency as collateral on the Ethereum blockchain. Borrowers sell these Dai on the market to Dai holders (lenders) for liquid assets. Dai holders use the Dai as a stable cryptocurrency for trade and to earn capital gains from its deflation. Maker is the Ethereum powered Decentralized Autonomous Organization (DAO) that operates the infrastructure of the Dai Credit System and provides default insurance to its users in exchange for an insurance fee.* 
+
+
+
+
+
+
+
+
+
+##Glossary of terms
+| | |
+| --- | --- |
+| **Dai** | An Ethereum based cryptocurrency with short term price stability and long term price deflation |
+| **Dai collateral** | Assets that can be locked cryptographically on the Ethereum blockchain |
+| **Dai issuer** | A person who borrows money from the Dai Credit System by posting collateral |
+| **Dai holder** | A person who lends money to the Dai Credit System and earns capital gains from Dai deflation |
+| **Maker** | Decentralized Autonomous Organization (DAO) operating the Dai Credit System infrastructure on the Ethereum blockchain |
+| **MKR** | A cryptocurrency that insures the collateralization of the Dai |
+| **SDR** | Special Drawing Right, a currency basket maintained by the International Monetary Fund |
+>>>>>>> master:dai_whitepaper.md
 | **BTC** | Bitcoin, the first cryptocurrency
 
 
 
 ## Value proposition
 
-**Dai issuers use the Dai** to borrow money instantly and without any requirements beyond posting adequate collateral. There are no term limits, and debt positions can opened and covered at any time. This means the Dai can service most types of credit demand, including margin trading and business credit.
+**Dai issuers use the Dai** to borrow money instantly and without any requirements beyond posting adequate collateral. There are no term limits, and debt positions can opened and covered at any time. This means the Dai can service most types of credit demand including margin trading and business credit.
 
-**Dai holders use the Dai** as a stable cryptocurrency on the Ethereum blockchain, and as a low risk investment asset that is free from volatility risk and is long term deflationary. The Dai has low risk relative to most blockchain assets because every Dai is provably backed by a diversified pool of collateral on the Ethereum blockchain, as well as by Makers insurance.
+**Dai holders use the Dai** as a stable cryptocurrency on the Ethereum blockchain.  Holders also use the DAI as a low risk investment asset that is free from volatility risk and is long term deflationary. The Dai has low risk relative to most blockchain assets because every Dai is provably backed by a diversified pool of collateral on the Ethereum blockchain as well as by Maker's insurance.
 
-**MKR owners gain value from the Dai** because MKR represents the ownership of Makers insurance service. Dai issuers pay an insurance fee on the Dai, and Maker steadily funnels this income to MKR owners by buying and permanently destroying MKR supply, thus decreasing the supply and increasing market price. In return Maker is forced to bail out bad debt in the event of a sudden collateral crash (a so-called black swan event). If Maker does not have enough assets on hand to immediately cover all bad debt, the MKR supply is automatically inflated and sold off to raise funds in order to cover all the bad debt over time. As a result MKR owners are exposed to both the profits and the risk of Makers insurance service.
+**MKR owners gain value from the Dai** because MKR represents the ownership of Maker's insurance service. Dai issuers pay an insurance fee on the Dai, and Maker steadily funnels this income to MKR owners by buying and permanently destroying MKR supply; thus decreasing the supply and increasing market price. In return, Maker is forced to bail out bad debt in the event of a sudden collateral crash (a so-called black swan event). If Maker does not have enough assets on hand to immediately cover all bad debt, the MKR supply is automatically inflated and sold off to raise funds in order to cover all the bad debt over time. As a result, MKR owners are exposed to both the profit and the risk of Maker's insurance service.
 
+<<<<<<< HEAD:dai-whitepaper.md
 ## Note on oracles, governance and roadmap
+=======
+##Note on oracles, governance, and roadmap
+>>>>>>> master:dai_whitepaper.md
 
-This document describes only the economic mechanisms of the fully implemented Dai Credit System. The Maker Prospectus (will be released soon) contains information about crucial supporting features such as the price feed oracles that deliver data to the blockchain, the governance scheme of the Maker DAO, as well as the current planned long term design roadmap for Maker from deployment to widespread adoption.
+This document describes only the economic mechanisms of the fully implemented Dai Credit System. The Maker Prospectus (released soon) contains information about crucial supporting features such as: the price feed oracles that deliver data to the blockchain, the governance scheme of the Maker DAO, and the long term design roadmap for Maker from deployment to widespread adoption.
 
 ## How it works
 ### Issuance and supply
 
-The Dai is a cryptocurrency on the Ethereum blockchain. Any Ethereum account can hold Dai, and can transfer it freely to other Ethereum accounts.
+The Dai is a cryptocurrency on the Ethereum blockchain. Any Ethereum account can hold Dai and can transfer it freely to other Ethereum accounts.
 
-When the Dai Credit System is initially deployed in early 2016, the value of the Dai will be pegged to a **target price** of 0.73 Special Drawing Rights (SDR). The SDR is an international currency basket maintained by the International Monetary Fund (IMF). Over time the target price will increase, resulting in long term deflation.
+When the Dai Credit System is initially deployed in early 2016, the value of the Dai will be pegged to a **target price** of 0.73 Special Drawing Rights (SDR). The SDR is an international currency basket maintained by the International Monetary Fund (IMF). Over time, the target price will increase resulting in long term deflation.
 
-The supply of Dai tokens is controlled through a decentralized issuance scheme that allows anyone to issue new Dai, while ensuring the Dai price remains stable around the target price. Issuing new Dai is done by locking collateral in a **collateralized debt position** (CDP) smart contract. A CDP holds **issuance collateral** as well as **issuance debt**. When a CDP issues Dai, its issuance debt is initially set equal to the amount of newly issued Dai, but increases over time as the CDP accrues an **insurance fee**. The collateral can be retrieved by the issuer paying down (“covering”) the issuance debt, plus the additional insurance fee, which is paid to the Maker Vault. Paying down the issuance debt and insurance fee returns the collateral to the issuer and deletes the CDP.
+The supply of Dai tokens is controlled through a decentralized issuance scheme that allows anyone to issue new Dai while ensuring the Dai price remains stable around the target price. Issuing new Dai is done by locking collateral in a **collateralized debt position** (CDP) smart contract. A CDP holds **issuance collateral** as well as **issuance debt**. When a CDP issues Dai, its issuance debt is initially set equal to the amount of newly issued Dai but increases over time as the CDP accrues an **insurance fee**. The collateral can be retrieved by the issuer paying down (“covering”) the issuance debt, plus the additional insurance fee, which is paid to the Maker Vault. Paying down the issuance debt and insurance fee returns the collateral to the issuer and deletes the CDP.
 
 >*__Example 1__: An issuer wishes to issue 100 Dai, and locks Bitcoin with a market value of significantly more than 100 Dai (“excess collateral”) into a CDP. The insurance rate is 2% over the following year. When the issuer wants to retrieve his Bitcoin, 102 Dai are required to cover the CDP.*
 

@@ -1,7 +1,7 @@
 ---
 permalink: /mkr-distribution-and-the-mkr-fund/
 layout: page
-title: MKR Distribution and the MKR Fund
+title: MKR distribution and the MKR fund
 ---
 
 
@@ -18,3 +18,9 @@ The MKR Fund can be seen as the "wallet component" of Maker, and is controlled a
 As the MKR Fund is ultimately controlled by holders of the MKR asset through voting, the implicit goal of the fund is to maximize the long term value of MKR by investing in projects and developments that generate a positive return for the overall MKR market cap.
 
 The most important way in which the Fund pursues this goal is to pay salaries (to individuals) and recurring payments (to companies) and other expenses of Maker during the early development of the system, and prepare a strategy for covering long term expenses in a sustainable manner once the system is fully developed and its blockchain infrastructure is locked down.
+
+
+<div class="pagination">
+    <a class="pagination-item older" href="/docs/governance-and-decentralization/">Part 4</a>
+    <a class="pagination-item newer" href="/docs/custodians/">Part 6</a>
+</div>
