@@ -28,8 +28,6 @@ Maker will initially use these oracle systems:
 
 * Oraclize, an external oracle solution that delivers price information as well as SSL-based cryptographic proof that the information has not been tampered with from its source. Oraclize provides a secondary source of information regarding the market price of assets signed directly by the exchanges.
 
-[//]: <> Pagination - quick & dirty
-[//]: <> // TODO Pagination
 
 
 <div class="pagination">

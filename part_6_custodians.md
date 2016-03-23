@@ -1,4 +1,9 @@
-#Custodians
+---
+permalink: /custodians/
+layout: page
+title: Custodians
+---
+
 
 ##Linking the global economy with the Dai Credit System
 
@@ -12,7 +17,7 @@ This can be done in an cryptoeconomically secure manner based on the Maker Gover
 
 A Custodian that receives a debt ceiling from Maker and uses it to issue Dai to sell in order to hold other assets needs to be able to withstand volatility in these other assets that it holds. Because of this, it is required that a Custodian always maintains a minimum buffer of capital that ensures it stays solvent even if there are price swings in the assets it holds. The reserve buffer is similar in nature to the zero point of CDP’s, as it the excess capital the Custodian must hold (equivalent to collateralization above 100% in CDPs)
 
->*__Example 1__*: A group of investors form a new Custodian in Singapore, and initially inject 50,000 USD worth of capital into the Custodian, held in its Singapore bank account. The Maker Governance Process has decided that the Custodian Reserve Buffer requirement is 20% of Issuance Debt. This means that the 50,000 USD reserve buffer would give the Custodian a maximum debt ceiling of 250,000 USD. If the Custodian issued all the Dai at once and sold them off for other assets, it would end up with a total capital pool of 300,000 USD, and 250,000 USD debt. 
+>*__Example 1__*: A group of investors form a new Custodian in Singapore, and initially inject 50,000 USD worth of capital into the Custodian, held in its Singapore bank account. The Maker Governance Process has decided that the Custodian Reserve Buffer requirement is 20% of Issuance Debt. This means that the 50,000 USD reserve buffer would give the Custodian a maximum debt ceiling of 250,000 USD. If the Custodian issued all the Dai at once and sold them off for other assets, it would end up with a total capital pool of 300,000 USD, and 250,000 USD debt.
 
 ###Custodian Trap
 
@@ -41,3 +46,9 @@ The key to ensuring that custodians are incentivized to not just fulfill but act
 ##The face of Maker to the incumbents
 
 Custodians creates a contact surface with which Maker can interact with incumbent institutions around the world that can impact its growth and stability, most importantly governments. As custodians are owned and run individual people, they can use their personal connections, trust and reputation to secure Maker an inroad to partnerships that normally would be out of reach to a DAO, such as financing joint ventures with governments or coordinate with governments to funnel money to strategic sectors, in return for public support. Seeking and maintaining relationships and shared interests with governments and public institutions is going to be crucial to ensure that the rise of Maker and the proliferation of the Dai is taken as a positive by the incumbents, and that they will not budge to protectionist urges by vested interests that stand to be disrupted.
+
+
+<div class="pagination">
+    <a class="pagination-item older" href="/docs/mkr-distribution-and-the-mkr-fund/">Part 5</a>
+    <span class="pagination-item newer">…</span>
+</div>
