@@ -2,7 +2,7 @@
 
 ##Linking the global economy with the Dai Credit System
 
-Custodians are legal entities (“companies”) registered in national jurisdictions around the world that perform vital functions that ensure the stability and economic efficiency of the Dai Credit System.
+Custodians are legal entities (incorporated companies), registered in national jurisdictions around the world, that perform vital functions to ensure the stability and economic efficiency of the Dai Credit System.
 
 At its core, a Custodian is an entity that has special issuance privileges given to it by the Maker governance process. These issuance privileges mean that a Custodian can collateralize its dai issuance based on internally held collateral (i.e. held on the company’s books and accounts) rather than held as locked collateral on the Ethereum blockchain.
 
