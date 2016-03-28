@@ -4,44 +4,51 @@ layout: page
 title: Governance and decentralization
 ---
 
-## Authority in Decentralized Autonomous Organizations
+## Authority in decentralized autonomous organizations
 
-Authority in DAOs work differently than in traditional organizations. It is entirely explicit, and direct, in the sense that if an entity has the authority to spend funds from the DAO or change a variable in the business logic it can be done by sending a transaction to a smart contract on the blockchain, and the action will immediately happen (except in cases where the DAO has rules in place to delay it). A DAO can be fully modifiable, meaning that its authority can change any part of its smart contracts and business logic, or it can be restricted, with parts of its infrastructure permanently locked down and unmodifiable, even by the DAOs authority. Restricted authority is useful to help users trust that the DAO will not suddenly alter its service in a detrimental way, or steal their funds.
+Authority in DAOs work differently than in traditional organizations. It's entirely explicit and direct, in the sense that if an entity has the authority to spend funds from the DAO or change a variable in its business logic, it can do so by sending a transaction to a smart contract on the blockchain and the action will immediately, unconditionally, and irreversibly happen &mdash; unless of course the DAO has rules in place to delay it. A DAO can be fully modifiable, meaning that its authority can change any part of its smart contracts and business logic, or it can be restricted, meaning that parts of its infrastructure are permanently locked down and unmodifiable even by the DAOs owners. Restricted authority is useful to help users trust that the DAO will not suddenly alter its service in a detrimental way, steal their funds, etc.
 
-In the Maker DAO, the highest authority to modify and control the system resides with the owners of the MKR token, the Maker shareholders. The power is exercised through the shareholders voting on actions, with each MKR giving one vote. A simple majority vote is able to change the voting rules, altering the business logic, spending funds, or permanently restricting the DAO authority.
+In the Maker DAO, the highest authority to modify and control the system resides with the owners of the MKR token &mdash; the Maker shareholders. The power is exercised through the shareholders voting on actions, with each MKR giving one vote. A simple majority vote is able to change the voting rules, altering the business logic, spending funds, or permanently restricting the DAO authority.
 
 ## Governance processes in Maker
 
-To allow shareholders to coordinate their votes and discuss regulatory and business strategies, a weekly governance meeting is held as a conference call using the teamspeak platform. While initiating proposals and voting on them can be done at any time, the framework of the governance meeting makes it easier for shareholders to do so in an organized and systematic fashion.
+To allow shareholders to coordinate their votes and discuss regulatory and business strategies, a weekly governance meeting is held as a conference call using the TeamSpeak platform. While initiating proposals and voting on them can be done at any time, the framework of the governance meeting makes it easier for shareholders to do so in an organized and systematic fashion.
 
-The Maker Slack channel functions as the primary communications platform, upon which the governance meeting is scheduled and shareholders can discuss any and all aspects of the DAO and its governance.
+Maker's Slack account functions as the primary communications platform for the shareholders to schedule governance meetings as well as discuss any and all aspects of the DAO and its governance.
 
-## The road to decentralization.
+## The road to decentralization
 
-Implementing Maker and the Dai Credit System will be a gradual process due to the high security requirements and many layers of complexity involved. To make the process as smooth and efficient as possible, Maker will start off with a more centralized governance model, and will move towards full decentralization over time as usage of the system increases.
+Due to the high security requirements and the many layers of complexity involved, implementing Maker and the Dai Credit System will be a gradual process. To make this process as smooth and efficient as possible, Maker is starting off with a more centralized governance model. Over time, as usage of the system increases, Maker will move towards full decentralization.
 
 ### The Dai Alpha
 
-In the earliest live implementation of Maker, called the Dai Alpha, MKR voting is not implemented and the authority over the system is instead held by a central group of people known as the Alpha Dynasty. This lack of decentralization is in place to enable flexibility during the early stages of the system, as well as allow deployment of the system sooner. Authority over the system is still implicitly held by MKR owners, with the Alpha Dynasty explicitly carrying out their will, similar to the dynamic between a board of directors and shareholders in a real company.
+In the earliest live implementation of Maker, called the Dai Alpha, MKR voting is not implemented and the authority over the system is instead held by a central group of people known as the Alpha Dynasty. This lack of decentralization is in place to allow an earlier deployment of the system, and to enable flexibility during its early stages. Authority over the system will still implicitly be held by MKR owners, whereas the Alpha Dynasty will simply be carrying out their will &mdash; similar to the dynamic between a company's board of directors and its shareholders.
 
-During the Dai Alpha, the Dai Credit System will not be fully implemented in a decentralized form either. CDPs will be manually created and their collateral will be held by the Alpha Dynasty in multi signature smart contracts, with the rules of the Dai Credit System manually enforced by the Alpha Dynasty. The process will be fully transparent and verifying the stability and collateralization of the Dai will be as simple as in the full implementation, but Dai users, as well as Maker shareholders, will have to trust the members of the Alpha Dynasty. For this reason they are chosen to be the founders and most active community members of the Maker DAO.
+During the Dai Alpha, the credit system will also not be fully implemented in a decentralized form. All CDPs will be manually created and their collateral will be held by the Alpha Dynasty in multisig smart contracts. The rules of the credit system will be manually enforced by the Alpha Dynasty. The process will be fully transparent and verifying the stability and collateralization of the dai will be as simple as in the full implementation. However, both the users and the shareholders of the system will have to trust the members of the Alpha Dynasty. For this reason, they are chosen to be the founders and most active community members of Maker.
 
 ### Implementation steps
 
-There are several phases after the Dai alpha that will be implemented in discrete steps in the following order.
+There are several phases after the Dai Alpha that will be implemented in discrete steps, in the following order.
 
-**Decentralized CDP engine**. When it is deployed CDPs will no longer have to be created manually, and users can issue Dai directly by interacting with the CDP engine smart contracts on the blockchain. The CDP engine will not have Maker Insurance so the stability of the Dai will not be as strong as with the full implementation of the Dai Credit System. As there is still no MKR voting when the CDP engine is implemented, the Alpha Dynasty will still be Makers authority and shareholders and users will need to trust them.
+#### The decentralized CDP engine
 
-**MKR voting**. This feature will allow shareholders to fully control the Maker DAO by proposing actions and voting on their execution through a user interface. With this implemented the Alpha Dynasty will no longer be necessary and Maker will have decentralized governance.
+Once the CDP engine is deployed, users will be able to issue dai directly by interacting with a set of smart contracts on the Ethereum blockchain. At this point, Maker Insurance will not yet have been implemented, so the stability of the dai will not be as strong as in the full implementation. Furthermore, there will not yet be any MKR voting, so users and shareholders will still need to trust the Alpha Dynasty to be Maker's executive authority.
 
-**Maker Insurance**. This feature means that Maker will be able to automatically inflate the MKR supply in order to bail out CDPs. When it is implemented the Dai will have full stability and strong decentralization.
+#### MKR voting
 
-**Authority lockdown**. When the features of the Dai Credit System have been fully implemented, all there is left is to lock down the permissions of the Maker authority, which is now controlled by MKR shareholders. Doing this will make it impossible for shareholders to confiscate collateral from the CDPs of Dai issuers, and will limit how quickly the risk parameters and monetary policy of the Dai Credit System can be changed. The end result is maximized decentralization and resilience of the Dai stablecoin.
+This feature will allow shareholders to fully control the Maker DAO by proposing actions and voting on their execution through a user interface. Once this is implemented, the Alpha Dynasty will no longer be necessary and from this point on Maker will have a decentralized governance structure.
 
-## Long term governance
+#### Maker Insurance
 
-In beginning of the Dai Credit System its risk parameters and monetary policy will be controlled on a day to day basis by a dynasty, a group of people having central control over the system but supervised by MKR shareholders and with restricted permissions. In the long run the day to day governance of the system will be managed by decentralized prediction markets according to the concepts of futarchy governance. This way Maker will be fully governed by the free market down the level of day to day decisions.
+This feature means that Maker will be able to automatically dilute MKR in order to bail out bad CDPs. Once this is implemented, the dai will have full stability and strong decentralization.
 
+#### Authority lockdown
+
+Once all the features of the Dai Credit System have been fully implemented, all that's left to do is to lock down the permissions of the Maker authority (now controlled by MKR shareholders). This will make it impossible for shareholders to do things like confiscate collateral from the CDPs of dai issuers. This will also limit how quickly the risk parameters and overall monetary policy of the credit system can be changed. The end result is maximized decentralization and resilience of the dai stablecoin.
+
+## Long-term governance
+
+Initially, the risk parameters and monetary policy of the credit system will be controlled by the Alpha Dynasty. In the long run, this responsibility will be handed over to a set of decentralized prediction markets according to the concept of *futarchy*. This way, Maker will ultimately be fully governed &mdash; even down to the level of day-to-day operations &mdash; by the free market.
 
 <div class="pagination">
     <a class="pagination-item older" href="/docs/keepers-and-oracles/">Part 3</a>

@@ -21,11 +21,11 @@ Maker is a DAO based on the Ethereum blockchain, where it maintains the infrastr
 
 The dai enables Ethereum users to transact with smart contracts and applications on the Ethereum blockchain without having to deal with the volatility that is associated with traditional cryptocurrencies like bitcoin. Because it's long-term deflationary, it also functions as a decentralized savings account, resulting in slow and steady capital gains.
 
-Maker is able to maintain this price stability through the dai credit system which backs the dai with collateral stored in Ethereum smart contracts, while simultaneously functioning as an internet-based, peer-to-peer credit market that commoditizes credit by allowing anyone with valid collateral to take out loans with low transaction costs and no middleman fees.
+Maker is able to maintain this price stability through the Dai Credit System which backs the dai with collateral stored in Ethereum smart contracts, while simultaneously functioning as an internet-based, peer-to-peer credit market that commoditizes credit by allowing anyone with valid collateral to take out loans with low transaction costs and no middleman fees.
 
 The Maker DAO is owned by the people who bought its core token (called MKR) during the development of the system. The MKR token is also a cryptocurrency like the dai, but it does not have price stability &mdash; on the contrary, it is highly speculative and volatile. Its function is to provide collateral insurance to the users of the dai, as well as to regulate the risk of the credit system. Because the entirety of Maker's business logic is fully automated and executed on the Ethereum blockchain, there is no legal entity and the organization doesn't have any representation in the legal world.
 
-## Users of the dai credit system
+## Users of the Dai Credit System
 
 Issuers of the dai are able to use the credit system to borrow money instantly and without any requirements, beyond posting adequate collateral. There are no term limits, and debt positions can opened and covered at any time. This means the dai can service most types of credit demand, including margin trading and business credit.
 
