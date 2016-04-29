@@ -54,7 +54,7 @@ Borrowing new dai is done by locking an amount of collateral inside a Collateral
 
 The deflationary nature of the dai means that the market value (measured in SDR) of the debt also increases over time, adding an additional cost to borrowing beyond the stability fee. The dai deflation is a transfer of value from dai borrowers to dai holders, while the stability fee is a transfer of value from dai borrowers to MKR owners.
 
-One of the primary use cases of CDPs is for margin trading by borrowers.
+One of the primary use cases of CDPs is margin trading by borrowers.
 
 >*__Example 2:__ Bob wishes to go margin long on the ETH/DAI pair, so he borrows 100 SDR worth of dai by posting 150 SDR worth of ETH to a CDP. He then buys another 100 SDR worth of ETH with his newly borrowed dai, putting him at a net 1.66x ETH/SDR exposure. He’s free to do whatever he wants with the 100 SDR worth of ETH he obtained by selling the dai, while the original ETH collateral (150 SDR worth) remains locked until the debt plus the stability fee is covered.*
 
