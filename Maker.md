@@ -42,7 +42,7 @@ All dai borrowers pay a *stability fee* which is funneled to MKR owners with Buy
 
 The total MKR supply starts at 1,000,000 MKR. Before deployment of the system 421,897 MKR (42.1897%) was distributed to founders and early buyers.
 
-The remaining undistributed 578,103 MKR was given to the Maker Fund, a smart contract separate from the core system that holds money on behalf of the Maker DAO and is controlled by MKR owners through the Maker Governance Process.
+The remaining undistributed 578,103 MKR was given to the Maker Fund, a smart contract separate from the core system that holds money on behalf of the Maker DAO and is controlled by MKR owners who participate in governance, called *governors*.
 
 ### The basic mechanics 
 
@@ -90,7 +90,7 @@ Managing the stability of the system
 
 Liquidations aren't guaranteed to be profitable despite always being triggered when the collateral ratio of the CDP is positive. Slippage or a market crash could cause the liquidation auction to burn less MKR than what was diluted from the debt auction, resulting in net loss for Maker and a net increase of the MKR supply.
 
-Maker has multiple risk parameters that ensure the system remains stable despite this risk. These parameters are controlled by MKR owners who participate in the Maker Governance Process (described in a later section).
+Maker has multiple risk parameters that ensure the system remains stable despite this risk. These parameters are controlled by the governors.
 
 **Stability fee - global**
 
