@@ -77,9 +77,9 @@ This mechanism is a negative feedback loop: deviation away from the target price
 
 ### Liquidation: Enforcing the target price
 
-To directly enforce the target price in the marketplace, a CDP gets liquidated by Maker if it hits its *liquidation ratio*. Liquidation means Maker takes over the collateral and sells it off in a *continuous splitting auction*.
+To directly enforce the target price in the marketplace, a CDP gets liquidated by Maker if it hits its *liquidation ratio*. Liquidation means Maker takes over the collateral and sells it off in a *continuous splitting auction*. A CSA is an auction mechanism that is specialized for automatic price discovery.
 
-In order for Maker to take over the collateral so it can be sold off, *emergency debt* is used to create dai that is backed by the ability of Maker to dilute the MKR supply. A reverse continuous splitting auction is used to find the lowest amount of MKR that needs to be diluted in order to raise enough dai to pay off the emergency debt.
+In order for Maker to take over the collateral so it can be sold off, *emergency debt* is instantly used to create dai that is backed by the ability of Maker to dilute the MKR supply. A reverse auction is used to find the lowest amount of MKR that needs to be diluted in order to raise enough dai to pay off the emergency debt. This type of auction is called a *debt auction*.
 
 Simultaneously, the collateral is sold off in a continuous splitting auction for dai, where all dai proceeds up until the *liquidation penalty* are immediately sent to the Buy&Burn contract. Any leftover dai proceeds are sent to the borrower that originally created the CDP.
 
@@ -123,21 +123,11 @@ Each keeper is constantly scanning the blockchain for CDPs that have gone below 
 
 Each keeper will want to try to sell dai when the market price is higher than the target price and similarly buy dai when the price is below the target, in order to profit from the known long term convergence towards the target price and make money from the spread.
 
-A keeper can aditionally also act as an Oracle by providing a price feed, as described in the following section.
+A keeper can additionally also act as an Oracle by providing a price feed, as described in the following section.
 
 ### Oracles: Providing external price feeds
 
-Another crucial group of external actors that Maker requires to function are price feed oracles. Oracles are mechanisms that provide information from the outside world onto a blockchain for smart contracts to consume. Maker needs information about the market price of the dai in order to determine its deviation from the target price. It also needs information about the market price of the various assets used as collateral for the dai, in order to determine the bounty for forced covers on CDPs, as well as when a Maker Bailout should be triggered.
-
-As smart contracts are unable to verify external data on their own, oracles are often one of the weakest and most easily attacked part of a DAO. Maker employs mechanisms to reduce oracle risk (the risk of oracles providing incorrect information to the detriment of the system). Most importantly, Maker uses multiple redundant oracle systems and processes the information internally in order to enable the credit system to function normally even if one or more of the price feed oracles are providing incorrect information.
-
-Notable oracle systems in the short term:
-
-**Keeper** is Maker's in-house oracle solution. This type of oracle is chosen by MKR owners through the Maker Governance Process. Keeper oracles will be cheap to run, and a large amount of them can deliver data together as a swarm, providing a high level of redundancy and decentralization.
- 
-**Oraclize** is an external service that delivers price information directly from centralized exchanges, along with SSL-based cryptographic proofs that the information has not been tampered with. This type of service has a different risk profile than more decentralized oracle models, making it very useful in a portfolio of diversified price feeds.
-
-**Augur** is an example of a DAO that is capable of maintaining a reliable decentralized oracle. While it currently does not support real time price feeds, it may become possible in the future for DAOs to provide price feeds to Maker as a service.
+Another crucial group of external actors that Maker requires to function are price feed oracles. Oracles are mechanisms that provide information from the outside world onto the blockchain for smart contracts to consume. Maker needs information about the market price of the dai in order to determine its deviation from the target price. It also needs information about the market price of the various assets used as collateral for the dai in order to know when liquidations can be triggered.
 
 ### Custodians: Collateral storage specialists
 
@@ -146,11 +136,7 @@ A Custodian is a company (legal entity) that specializes in repackaging legal se
 Governance of Maker
 -----------------------------------
 
-Authority in DAOs work differently than in traditional organizations. It’s entirely explicit and direct, in the sense that if an entity has the authority to perform an action (e.g. spend funds from the DAO or change a variable in its business logic), it can do so by sending a transaction to a smart contract on the blockchain and the action will unconditionally and irreversibly happen the moment the transaction is confirmed — unless the DAO has specific rules in place to delay it. 
-
-A DAO can both be *dynamic*, meaning that its authority can change any part of its smart contracts and business logic, or it can be *locked*, meaning that parts of its infrastructure are permanently immutable even by the highest authority in the DAO. Locking down all or parts of the business logic of a DAO is useful to help users trust that the DAO will not suddenly alter its service in a detrimental way or steal their funds.
-
-### The Maker Governance Process
+### The voting process
 
 *Direct governance* means controlling Maker directly through voting with an Ethereum account that holds MKR. An account gets a vote for each MKR token held. MKR owners who actively vote and participate in governance are called *governors*. A simple majority vote has full authority of the system to change the voting rules, alter the business logic, spend money from the Fund, and locking down Maker's smart contracts as the system matures.
 
