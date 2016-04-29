@@ -26,13 +26,9 @@ Introduction to the dai stablecoin and Maker
 
 ### Dai and Maker
 
-Dai is a stablecoin, and Maker is the organization that backs its stability. This is achieved by keeping the dai *market price* stable around a *target price* using two backing mechanisms: 
+Dai is a stablecoin on Ethereum, and Maker is the organization that backs its stability.
 
-* **The Dai Credit System** ensures all outstanding dai are backed in excess by liquid assets as collateral. So if the target price is 1 USD, there will always be locked collateral worth more than 1 USD backing each outstanding dai.
-
-* **The Maker Stability Service** acts as a failsafe in case there is bad collateral, automatically diluting the MKR supply to pay for bailouts if they are needed due to a collateral crash.
-
-New dai enter the money supply when a *borrower* uses the Dai Credit System to borrow dai by posting collateral with Maker. The collateral is held in a smart contract called a Collateralized Debt Position (CDP) from where it is used to back the stability of the dai. It is always possible to instantly verify that all dai are fully backed according to the rules of the Dai Credit System, since the collateral is held in transparent smart contracts on the Ethereum blockchain.
+New dai enter the money supply when a *borrower* borrows dai by posting collateral with Maker. The collateral is held in a smart contract called a Collateralized Debt Position (CDP) from where it is used to back the stability of the dai in a fully transparent manner that anyone can verify.
 
 Any Ethereum account is free to borrow dai without any requirements or restrictions beyond posting and maintaining adequate collateral. Dai borrowing has no term limits, and borrowers can open and cover CDPs at any time.
 
@@ -40,17 +36,17 @@ Dai *holders* buy dai from borrowers and use it as a stablecoin for transactions
 
 ### MKR, the share of Maker
 
-MKR is the name of the token that act as shares in the Maker DAO. The price of MKR depends on the performance of the Dai Credit System.
+MKR is the name of the token that act as shares in the Maker DAO. The price of MKR depends on the performance of the dai.
 
-MKR gains value from the Dai Credit System because the MKR token represents ownership of the Maker Stability Service. All dai borrowers pay a *stability fee* which is funneled to MKR owners with Buy&Burn. In return, Maker is forced to bail out any bad debt in the event of a sudden collateral crash (called a *black swan event*). Bailouts are done with Emergency debt backed by forced dilution of the MKR supply. As a result, MKR owners are exposed to both the profits and the risk of the Maker Stability Service.
+All dai borrowers pay a *stability fee* which is funneled to MKR owners with Buy&Burn. In return, Maker acts as a market maker of last resort that automatically liquidates debt that has become too risky.
 
 The total MKR supply starts at 1,000,000 MKR. Before deployment of the system 421,897 MKR (42.1897%) was distributed to founders and early buyers.
 
-The remaining undistributed 578,103 MKR was given to the Maker Fund, a smart contract that holds money on behalf of the Maker DAO and is controlled by MKR owners through the Maker Governance Process.
+The remaining undistributed 578,103 MKR was given to the Maker Fund, a smart contract separate from the core system that holds money on behalf of the Maker DAO and is controlled by MKR owners through the Maker Governance Process.
 
 ### The basic mechanics 
 
-The target price of the dai is denominated in Special Drawing Rights (SDR) - an international currency basket maintained by the IMF that has low volatility against all major world currencies. When the Dai Credit System is launched, the value of 1 DAI will be pegged to an initial target price of 1 USD worth of SDR at [the exchange rate reported by the IMF](https://www.imf.org/external/np/fin/data/rms_sdrv.aspx). After launch the dai will detach from this initial target and start to slowly appreciate against the SDR over the long term while maintaining low volatility in the short term.
+The target price of the dai is denominated in Special Drawing Rights (SDR) - an international currency basket maintained by the IMF that has low volatility against all major world currencies. When the dai is launched, the value of 1 DAI will be pegged to an initial target price of 1 USD worth of SDR at [the exchange rate reported by the IMF](https://www.imf.org/external/np/fin/data/rms_sdrv.aspx). After launch the dai will detach from this initial target and start to slowly appreciate against the SDR over the long term while maintaining low volatility in the short term.
 
 Borrowing new dai is done by locking an amount of collateral inside a Collateralized Debt Position (CDP) smart contract, which then sends newly borrowed dai to the borrowers wallet, while also creating a corresponding amount of debt. Over time, the CDP accrues a stability fee which is added on top of the debt. The borrower can retrieve the posted collateral by *covering* the debt plus the stability fee accrued since the CDP was created. All stability fees from CDPs go into the Buy&Burn contract
 
@@ -73,7 +69,7 @@ Although CDPs are not fungible with each other, the ownership of a CDP is transf
 How Maker keeps the dai stable
 ------------------------------
 
-The stability of the dai around the target price is maintained by modifying the demand for borrowing and the demand for holding via *deflation rate adjustments*.
+The stability of the dai around the target price is maintained by modifying the demand for borrowing and the demand for holding via *deflation rate adjustment*.
 
 ### Low volatility through targeting a deflation rate determined by the market
 
@@ -85,7 +81,7 @@ This mechanism is a negative feedback loop: deviation away from the target price
 
 ### Liquidation: enforcing the target price
 
-To directly enforce the target price in the marketplace, a CDP gets liquidated by Maker if it hits its *liquidation ratio*. The liquidation ratio is determined based on the target price. Liquidation means Maker takes over the collateral and sells it off in a *continuous splitting auction*.
+To directly enforce the target price in the marketplace, a CDP gets liquidated by Maker if it hits its *liquidation ratio*. Liquidation means Maker takes over the collateral and sells it off in a *continuous splitting auction*.
 
 In order for Maker to take over the collateral so it can be sold off, *emergency debt* is used to create dai that is backed by the ability of Maker to dilute the MKR supply. A reverse continuous splitting auction is used to find the lowest amount of MKR that needs to be diluted in order to raise enough dai to pay off the emergency debt.
 
@@ -96,7 +92,7 @@ If the market price of the collateral asset doesn't fall more than the buffer pr
 >*__Example 4:__ If we assume that ether has a liquidation ratio of 145% and an Ether-CDP is outstanding at 150% collateral ratio. The Ether price crashes 10% against the target price, which causes the collateral ratio of the CDP to fall to ~135%. As it falls below its liquidation ratio, traders can trigger its liquidation and begin bidding with dai for buying MKR in the debt auction, and bidding with dai for buying the collateral in the collateral auction.
 
 
-The Maker Stability Service
+Managing the stability of the system
 ---------------------------------------
 
 Liquidations aren't guaranteed to be profitable despite always being triggered when the collateral ratio of the CDP is positive. Slippage or a market crash could cause the liquidation auction to burn less MKR than what was diluted from the debt auction, resulting in net loss for Maker and a net increase of the MKR supply.
@@ -124,7 +120,7 @@ How external agents assist Maker
 
 ### Keepers - Keeping the system economically efficient
 
-Traders that systematically earn an income from the Dai Credit System by exploiting simple profit opportunities are called keepers. In a general sense, a keeper is an economic agent that contributes to decentralized systems in exchange for built-in rewards. In the context of Maker, keepers perform several important functions:
+Traders that systematically earn an income from Maker and the dai by exploiting simple profit opportunities are called keepers. In a general sense, a keeper is an economic agent that contributes to decentralized systems in exchange for built-in rewards. In the context of Maker, keepers perform several important functions:
 
 **Participating in continuous splitting auctions**
 
@@ -190,50 +186,3 @@ All governance related discussion and debate that doesn't take place in the fram
 **Formal governance proposal:** Once a proposal has been amended to a form that doesn't have any obvious objections, it can move on to formal governance. Formal governance ensures that every governor is present to weigh the proposal as it is presented in formal parlance that emphasizes the use of simple English with live translation to other major languages. If there is input and objections to the proposal they have to be properly articulated, and if necessary the proposal can be delayed until the next governance meeting to allow another week of informal governance. When a proposal no longer has any formal objections or input, an action proposal has to be created and published for scrutiny so that governors can ensure that it properly implements the spirit of the proposal.
 
 **Direct governance vote:** When the action proposal is considered ready for vote, it is initiated by the proposer and governors can begin the process of voting for or against it. As mentioned above, the initiation has to be done during the governance meeting, or it is considered either an attack or a governance crisis. The process of voting extends beyond the governance meeting where it was proposed, allowing plenty of time for every governor to vote even if they weren't present.
-
-Implementing Maker and the road to decentralization
------------------------------------
-
-Due to the high security requirements and the many layers of complexity involved, implementing Maker and the Dai Credit System will be a gradual process. To make this process as smooth and efficient as possible, Maker is starting off with a more centralized governance model. Over time, as usage of the system increases, Maker will move towards full decentralization.
-
-### Maker Centralized Alpha: Contract system deployment and token platform
-
-In the earliest live implementation of Maker only the MKR token is live, but implemented without MKR voting or any other behaviour beyond being a regular token with 1,000,000 supply. The ability to propose actions rests with a centralized admin multisig known as the Alpha Dynasty. This lack of decentralization is in place to allow an earlier deployment of the system, and to enable flexibility during its early stages. Authority over the system will still implicitly be held by MKR owners and the Maker Governance Process, and the Alpha Dynasty will be responsible for carrying out the intentions of the Maker Governance Process exactly as described with no formal authority of their own. This should be considered similar to the dynamic between a company’s board of directors and its shareholders, however as there is no explicit legal link in place both the users and the shareholders of the system will have to trust the members of the Alpha Dynasty. For this reason, they are chosen to be the founders and most active and vested community members of Maker.
-
-**Upgrade to Semi-Decentralization**
-
-An early planned upgrade of the system is the implementation of semi-decentralization, which reduces the centralization of the system as it allows MKR owners to vote to block action proposals proposed by the Alpha Dynasty. This significantly reduces the centralization risk of the Alpha Dynasty and means that as long as enough governors are actively voting, no undesirable actions can be passed.
-
-### Dai Alpha: Minimum Viable Product
-
-The first implementation of the dai stablecoin is called the Dai Alpha.
-
-During the Dai Alpha, the Dai Credit System will not be fully implemented. All CDPs will be manually created and their collateral will be managed by the Alpha Dynasty using semi-decentralized action proposals. The rules of dai borrowing and margin calls will be manually enforced by the Alpha Dynasty with simplified mechanics dictated by the governance process.
-
-### Long-term development roadmap
-
-There are several phases on the roadmap after the Dai Alpha. The development will happen in discrete steps, in the following order.
-
--   **Dai Credit System (Decentralized CDP engine)**
-
-    This feature will allow users to borrow dai directly by interacting with Maker's contracts on the Ethereum blockchain.
-
-    When the CDP engine is deployed, the Maker Stability Service will not yet have been implemented, so the stability of the dai will not be as strong as in the full implementation as there are no automatic bailouts.
-
--   **Decentralized MKR voting**
-
-    This feature will allow shareholders to fully control the Maker DAO by proposing actions and voting on their execution through a user interface.
-
-    Once this is implemented, the Alpha Dynasty will no longer be necessary and from this point on Maker will have a fully decentralized governance structure.
-
--   **Maker Stability Service (automatic bailouts and forced dilution)**
-
-    This feature means that Maker will be able to automatically dilute MKR in order to bail out undercollateralized CDPs. The dai will have its stability mechanics fully implemented.
-
--   **Authority lockdown**
-
-    Once all the features of Maker and the Dai Credit System have been fully implemented, all that’s left to do is to lock down the permissions of the governors.
-
-    This will prevent shareholders from destructive behaviour like attempting to confiscate collateral from the CDPs of dai borrowers. It will also limit how quickly the risk parameters and overall monetary policy of the credit system can be changed, which also prevents destructive behaviour such as using sudden parameter adjustments as an attack vector.
-
-    The end result is maximized decentralization and resilience of the dai stablecoin.
