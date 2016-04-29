@@ -14,7 +14,7 @@ Maker is a Decentralized Autonomous Organization (DAO) that backs the value of t
 
 * [Chat](https://makerdao.slack.com) - Primary platform of community interaction
 * [Forum](https://forum.makerdao.com) - For debate and proposals
-* [Subreddit](https://www.reddit.com/r/makerdao) - Best place to get lateste news and links
+* [Subreddit](https://www.reddit.com/r/makerdao) - Best place to get latest news and links
 * [GitHub](https://github.com/makerdao) - Repository of the public Maker code
 * [TeamSpeak](https://ts.makerdao.com/) - For governance meeting conference calls
 * [SoundCloud](https://soundcloud.com/makerdao) - Governance meeting recordings
@@ -146,7 +146,7 @@ There are four major phases when governors exercise direct governance over Maker
 
 **The second phase** is *initiating* the action proposal for public vote by the governors. This enables governors to vote on the action proposal with their MKR and starts the expiration timer of the action proposal.
 
-**The third phase** is the voting process - voting is done according to the voting rules of the system, that themselves are modifiable until they are locked down by the governance process. Each action proposal has an experiation time after which it is automatically abandoned. 
+**The third phase** is the voting process - voting is done according to the voting rules of the system, that themselves are modifiable until they are locked down by the governance process. Each action proposal has an expiration time after which it is automatically abandoned. 
 
 **The fourth phase** is execution of the *action*, the transaction that modifies the state of the Maker smart contracts.
 
