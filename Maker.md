@@ -38,7 +38,7 @@ Dai *holders* buy dai from borrowers and use it as a stablecoin for transactions
 
 MKR is the name of the token that act as shares in the Maker DAO. The price of MKR depends on the performance of the dai.
 
-All dai borrowers pay a *stability fee* which is funneled to MKR owners with Buy&Burn. In return, Maker acts as a market maker of last resort that automatically liquidates debt that has become too risky.
+All dai borrowers pay a *stability fee* which is funneled to MKR owners with Buy&Burn. Buy&Burn means using income to buy up MKR shares and permanently destroy them. In return, Maker acts as a market maker of last resort that automatically liquidates risky CDPs.
 
 The total MKR supply starts at 1,000,000 MKR. Before deployment of the system 421,897 MKR (42.1897%) was distributed to founders and early buyers.
 
@@ -48,19 +48,15 @@ The remaining undistributed 578,103 MKR was given to the Maker Fund, a smart con
 
 The target price of the dai is denominated in Special Drawing Rights (SDR) - an international currency basket maintained by the IMF that has low volatility against all major world currencies. When the dai is launched, the value of 1 DAI will be pegged to an initial target price of 1 USD worth of SDR at [the exchange rate reported by the IMF](https://www.imf.org/external/np/fin/data/rms_sdrv.aspx). After launch the dai will detach from this initial target and start to slowly appreciate against the SDR over the long term while maintaining low volatility in the short term.
 
-Borrowing new dai is done by locking an amount of collateral inside a Collateralized Debt Position (CDP) smart contract, which then sends newly borrowed dai to the borrowers wallet, while also creating a corresponding amount of debt. Over time, the CDP accrues a stability fee which is added on top of the debt. The borrower can retrieve the posted collateral by *covering* the debt plus the stability fee accrued since the CDP was created. All stability fees from CDPs go into the Buy&Burn contract
-
-The Buy&Burn contract uses dai sent to it to buy up MKR from the market and "burn" it, permanently removing it from the MKR total supply. The continuous cash flow from the stability fee gets turned into a continuous cash flow into the MKR, giving it an intrinsic value based on the total long term value of this earned cash flow.
+Borrowing new dai is done by locking an amount of collateral inside a Collateralized Debt Position (CDP) smart contract, which then sends newly borrowed dai to the borrowers wallet, while also creating a corresponding amount of debt. Over time, the CDP accrues a stability fee which is added on top of the debt. The borrower can retrieve the posted collateral by *covering* the debt plus the stability fee accrued since the CDP was created. All stability fees from CDPs go into the Buy&Burn contract.
 
 >*__Example 1:__ Bob wants to borrow 100 dai. He locks an amount of ETH worth significantly more than 100 dai into a CDP and uses it to borrow 100 dai. The 100 dai is instantly sent directly to his Ethereum account. Assuming that the stability fee is 0.5% per year over the coming year bob will need 100.5 dai to cover the CDP if he decides to retrieve his ETH after one year.*
 
-The deflationary nature of the dai means that the market value (measured in SDR) of the debt also increases over time, adding an additional cost to borrowing beyond the *Maker fee*. The dai deflation is a transfer of value from dai borrowers to dai holders, while the Maker fee is a transfer of value from dai borrowers to MKR owners.
+The deflationary nature of the dai means that the market value (measured in SDR) of the debt also increases over time, adding an additional cost to borrowing beyond the stability fee. The dai deflation is a transfer of value from dai borrowers to dai holders, while the stability fee is a transfer of value from dai borrowers to MKR owners.
 
-In practice, the borrower is either seeking to take a leveraged long position on the asset used as collateral (“margin trading”), or seeking liquidity in a hard currency without wanting to sell the asset used as collateral (for example, a business collateralizing its own stock in order to raise short-term liquidity for operational expenses).
+One of the primary use cases of CDPs is for margin trading by borrowers.
 
-In both cases, the way the borrower obtains the asset he actually desires is by selling the borrowed dai on the open market for the asset he wants. On the other side of this trade, buyers will want to obtain dai in order to use it as a stable cryptocurrency on the Ethereum blockchain or simply to earn capital gains due to its long-term deflationary nature.
-
->*__Example 2:__ Bob wishes to go margin long on the ETH/DAI pair, so he borrows 100 SDR worth of dai by posting 150 SDR worth of ETH to a CDP. He then buys another 100 SDR worth of ETH with his newly borrowed dai, putting him at a net 1.66x ETH/SDR exposure. He’s free to do whatever he wants with the 100 SDR worth of ETH he obtained by selling the dai, while the original ETH held as collateral (150 SDR worth) remains locked until the debt plus the stability fee is covered.*
+>*__Example 2:__ Bob wishes to go margin long on the ETH/DAI pair, so he borrows 100 SDR worth of dai by posting 150 SDR worth of ETH to a CDP. He then buys another 100 SDR worth of ETH with his newly borrowed dai, putting him at a net 1.66x ETH/SDR exposure. He’s free to do whatever he wants with the 100 SDR worth of ETH he obtained by selling the dai, while the original ETH collateral (150 SDR worth) remains locked until the debt plus the stability fee is covered.*
 
 Although CDPs are not fungible with each other, the ownership of a CDP is transferable. This allows CDPs to be used in smart contracts that perform more complex methods of borrowing (for example, involving more than one actor).
 
@@ -79,18 +75,15 @@ The same mechanism works in reverse if the market price is higher than the targe
 
 This mechanism is a negative feedback loop: deviation away from the target price in one direction triggers a push in the opposite direction. The magnitude of the deflation rate adjustments depend on how strongly the market price deviates from the target price, so that strong deviations result in aggressive adjustments while weak deviations result in small adjustments.
 
-### Liquidation: enforcing the target price
+### Liquidation: Enforcing the target price
 
 To directly enforce the target price in the marketplace, a CDP gets liquidated by Maker if it hits its *liquidation ratio*. Liquidation means Maker takes over the collateral and sells it off in a *continuous splitting auction*.
 
 In order for Maker to take over the collateral so it can be sold off, *emergency debt* is used to create dai that is backed by the ability of Maker to dilute the MKR supply. A reverse continuous splitting auction is used to find the lowest amount of MKR that needs to be diluted in order to raise enough dai to pay off the emergency debt.
 
-Simultaneously, the collateral is sold off in a continuous splitting auction for dai, where all dai proceeds up until the *penalty ratio* are immediately sent to a Buy&Burn contract. A Buy&Burn contract uses a continuous splitting auction to buy MKR with dai and then burn it, counteracting the effects of dilution from the emergency debt auction. If an amount of dai beyond the penalty ratio gets raised from the auction, the remainder is sent to the borrower who originally created the CDP.
+Simultaneously, the collateral is sold off in a continuous splitting auction for dai, where all dai proceeds up until the *liquidation penalty* are immediately sent to the Buy&Burn contract. Any leftover dai proceeds are sent to the borrower that originally created the CDP.
 
-If the market price of the collateral asset doesn't fall more than the buffer provided by the liquidation ratio during the timeframe of the collateral auction, a liquidation will be profitable for Maker as more MKR will have been burned than diluted, resulting in a net decrease in the MKR supply.
-
->*__Example 4:__ If we assume that ether has a liquidation ratio of 145% and an Ether-CDP is outstanding at 150% collateral ratio. The Ether price crashes 10% against the target price, which causes the collateral ratio of the CDP to fall to ~135%. As it falls below its liquidation ratio, traders can trigger its liquidation and begin bidding with dai for buying MKR in the debt auction, and bidding with dai for buying the collateral in the collateral auction.
-
+>*__Example 4:__ If we assume that Ether has a liquidation ratio of 145% and an Ether-CDP is outstanding at 150% collateral ratio. The Ether price crashes 10% against the target price, which causes the collateral ratio of the CDP to fall to ~135%. As it falls below its liquidation ratio, traders can trigger its liquidation and begin bidding with dai for buying MKR in the debt auction, and bidding with dai for buying the collateral in the collateral auction.
 
 Managing the stability of the system
 ---------------------------------------
@@ -99,26 +92,26 @@ Liquidations aren't guaranteed to be profitable despite always being triggered w
 
 Maker has multiple risk parameters that ensure the system remains stable despite this risk. These parameters are controlled by MKR owners who participate in the Maker Governance Process (described in a later section).
 
-### Stability fee - global
+**Stability fee - global**
 
 The stability fee is a global fee paid by every CDP. It is defined as a yearly percentage that is calculated on top of the existing debt of the CDP. When the borrower covers their CDP, the dai used to cover the CDP debt is destroyed, but the dai used to pay the stability fee is sent to the Buy&Burn contract.
 
-### Debt ceiling - per CDP type
+**Debt ceiling - per CDP type**
 
 Debt ceiling is the maximum amount of debt that can be created by a single type of CDP. Once enough debt has been created by CDPs of a given type, it becomes impossible to create more unless existing CDPs are closed.
 
-### Liquidation ratio - per CDP type
+**Liquidation ratio - per CDP type**
 
 Liquidation ratio is the collateralization ratio at which a CDP can be liquidated.
 
-### Penalty ratio - per CDP type
+**Penalty ratio - per CDP type**
 
 The penalty ratio is used to determined the maximum amount of dai raised from a liquidation auction that goes to Buy&Burn, with the remainder getting returned to the borrower who originally created the CDP.
 
 How external agents assist Maker
 --------------------------------
 
-### Keepers - Keeping the system economically efficient
+### Keepers: Keeping the system economically efficient
 
 Traders that systematically earn an income from Maker and the dai by exploiting simple profit opportunities are called keepers. In a general sense, a keeper is an economic agent that contributes to decentralized systems in exchange for built-in rewards. In the context of Maker, keepers perform several important functions:
 
@@ -132,7 +125,7 @@ Each keeper will want to try to sell dai when the market price is higher than th
 
 A keeper can aditionally also act as an Oracle by providing a price feed, as described in the following section.
 
-### Oracles - providing external price feeds
+### Oracles: Providing external price feeds
 
 Another crucial group of external actors that Maker requires to function are price feed oracles. Oracles are mechanisms that provide information from the outside world onto a blockchain for smart contracts to consume. Maker needs information about the market price of the dai in order to determine its deviation from the target price. It also needs information about the market price of the various assets used as collateral for the dai, in order to determine the bounty for forced covers on CDPs, as well as when a Maker Bailout should be triggered.
 
@@ -146,7 +139,7 @@ Notable oracle systems in the short term:
 
 **Augur** is an example of a DAO that is capable of maintaining a reliable decentralized oracle. While it currently does not support real time price feeds, it may become possible in the future for DAOs to provide price feeds to Maker as a service.
 
-### Custodians - collateral storage specialists
+### Custodians: Collateral storage specialists
 
 A Custodian is a company (legal entity) that specializes in repackaging legal securities into a format that can be used as collateral for borrowing dai. This is achieved through a smart contract called the *custodian trap* which enables Maker to give the custodian a debt ceiling based on its internal holdings of legal securities. Custodians increase the ability of the system to respond to dai demand shocks.
 
