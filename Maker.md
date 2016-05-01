@@ -65,7 +65,7 @@ Although CDPs are not fungible with each other, the ownership of a CDP is transf
 How Maker keeps the dai stable
 ------------------------------
 
-The stability of the dai around the target price is maintained by modifying the demand for borrowing and the demand for holding via *deflation rate adjustment*.
+The stability of the dai around the target price is maintained by modifying the incentives for borrowing and for holding Dai, via *deflation rate adjustment*.
 
 ### Low volatility through targeting a deflation rate determined by the market
 
