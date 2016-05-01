@@ -138,7 +138,7 @@ Governance of Maker
 
 ### The voting process
 
-*Direct governance* means controlling Maker directly through voting with an Ethereum account that holds MKR. An account gets a vote for each MKR token held. MKR owners who actively vote and participate in governance are called *governors*. A simple majority vote has full authority of the system to change the voting rules, alter the business logic, spend money from the Fund, and locking down Maker's smart contracts as the system matures.
+*Direct governance* means controlling Maker directly through voting with an Ethereum account that holds MKR. An account gets a vote for each MKR token held. MKR owners who actively vote and participate in governance are called *governors*. A simple majority vote has full authority of the system to change the voting rules, alter the business logic, spend money from the Fund, and lock down Maker's smart contracts as the system matures.
 
 There are four major phases when governors exercise direct governance over Maker through the voting process. 
 
