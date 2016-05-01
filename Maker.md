@@ -127,7 +127,7 @@ A keeper can additionally also act as an Oracle by providing a price feed, as de
 
 ### Oracles: Providing external price feeds
 
-Another crucial group of external actors that Maker requires to function are price feed oracles. Oracles are mechanisms that provide information from the outside world onto the blockchain for smart contracts to consume. Maker needs information about the market price of the dai in order to determine its deviation from the target price. It also needs information about the market price of the various assets used as collateral for the dai in order to know when liquidations can be triggered.
+Another crucial group of external actors that Maker requires to function are price feed oracles. Oracles are mechanisms that provide information from the outside world onto the blockchain for smart contracts to consume. Maker needs information about the market price of the dai and its deviation from the target price in order to adjust the deflation rate. It also needs information about the market price of the various assets used as collateral for the dai in order to know when liquidations can be triggered.
 
 ### Custodians: Collateral storage specialists
 
