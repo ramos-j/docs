@@ -36,7 +36,7 @@ Dai *holders* buy dai from borrowers and use it as a stablecoin for transactions
 
 ### MKR, the share of Maker
 
-MKR is the name of the token that act as shares in the Maker DAO. The price of MKR depends on the performance of the dai.
+MKR is the name of the token that acts as shares in the Maker DAO. The price of MKR depends on the performance of the dai.
 
 All dai borrowers pay a *stability fee* which is funneled to MKR owners with Buy&Burn. Buy&Burn means using income to buy up MKR shares and permanently destroy them. In return, Maker acts as a market maker of last resort that automatically liquidates risky CDPs.
 
