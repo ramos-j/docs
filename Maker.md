@@ -4,9 +4,9 @@ Maker
 Quick information
 -------------------------------
 
-Maker is a Decentralized Autonomous Organization (DAO) that backs the value of the dai stablecoin on the Ethereum blockchain. A DAO is an organization that is entirely blockchain based, using smart contracts to enforce its rules and business logic.
+Maker is a Decentralized Autonomous Organization (DAO) that backs the value of the dai stablecoin on the Ethereum blockchain. A DAO is an organization that is entirely blockchain-based, using smart contracts to enforce its rules and business logic.
 
-**DAI** is a stablecoin used for trade and transfers on Ethereum. A stablecoin is a cryptocurrency with price stability.
+**Dai** is a stablecoin used for trade and transfers on Ethereum. A stablecoin is a cryptocurrency with price stability.
 
 **MKR** is a speculative share that backs the value of the dai. Maker earns a continuous fee on all outstanding dai, in return for governing the system and taking on the risk of bailouts. Maker's income is funnelled to MKR owners through Buy&Burn.
 
@@ -26,29 +26,29 @@ Introduction to the dai stablecoin and Maker
 
 ### Dai and Maker
 
-Dai is a stablecoin on Ethereum, and Maker is the organization that backs its stability.
+Dai is a stablecoin on Ethereum, and Maker is the organization that backs its stability by regulating its collateral requirements.
 
 New dai enter the money supply when a *borrower* borrows dai by posting collateral with Maker. The collateral is held in a smart contract called a Collateralized Debt Position (CDP) from where it is used to back the stability of the dai in a fully transparent manner that anyone can verify.
 
 Any Ethereum account is free to borrow dai without any requirements or restrictions beyond posting and maintaining adequate collateral. Dai borrowing has no term limits, and borrowers can open and cover CDPs at any time.
 
-Dai *holders* buy dai from borrowers and use it as a stablecoin for transactions on Ethereum and as a long-term deflationary store of value.
+Dai *holders* buy dai from borrowers and use it as a stablecoin for transactions on Ethereum and as a long-term store of value.
 
 ### MKR, the share of Maker
 
 MKR is the name of the token that acts as shares in the Maker DAO. The price of MKR depends on the performance of the dai.
 
-All dai borrowers pay a *stability fee* which is funneled to MKR owners with Buy&Burn. Buy&Burn means using income to buy up MKR shares and permanently destroy them. In return, Maker acts as a market maker of last resort that automatically liquidates risky CDPs.
+All dai borrowers pay a *stability fee* which is funneled to MKR owners with Buy&Burn. Buy&Burn means using income to buy up MKR and permanently destroying them. In return, Maker acts as a market maker of last resort that automatically liquidates risky CDPs.
 
 The total MKR supply starts at 1,000,000 MKR. Before deployment of the system 421,897 MKR (42.1897%) was distributed to founders and early buyers.
 
-The remaining undistributed 578,103 MKR was given to the Maker Fund, a smart contract separate from the core system that holds money on behalf of the Maker DAO and is controlled by MKR owners who participate in governance, called *governors*.
+The remaining undistributed 578,103 MKR was given to the Maker Fund, a smart contract separate from the core system that holds money on behalf of the Maker DAO and is controlled temporarily by MKR owners who participate in governance, called *governors*.
 
 ### The basic mechanics 
 
-The target price of the dai is denominated in Special Drawing Rights (SDR) - an international currency basket maintained by the IMF that has low volatility against all major world currencies. When the dai is launched, the value of 1 DAI will be pegged to an initial target price of 1 USD worth of SDR at [the exchange rate reported by the IMF](https://www.imf.org/external/np/fin/data/rms_sdrv.aspx). After launch the dai will detach from this initial target and start to slowly appreciate against the SDR over the long term while maintaining low volatility in the short term.
+The target price of the dai is denominated in Special Drawing Rights (SDR) - an international currency basket maintained by the IMF that has low volatility against all major world currencies. When the dai is launched, the value of 1 DAI will be pegged to an initial target price of 1 USD worth of SDR at [the exchange rate reported by the IMF](https://www.imf.org/external/np/fin/data/rms_sdrv.aspx). After launch the dai will detach from this initial target and start to slowly fluctuate against the SDR (with a bias towards deflation under normal conditions) over the long term, while maintaining low volatility in the short term.
 
-Borrowing new dai is done by locking an amount of collateral inside a Collateralized Debt Position (CDP) smart contract, which then sends newly borrowed dai to the borrowers wallet, while also creating a corresponding amount of debt. Over time, the CDP accrues a stability fee which is added on top of the debt. The borrower can retrieve the posted collateral by *covering* the debt plus the stability fee accrued since the CDP was created. All stability fees from CDPs go into the Buy&Burn contract.
+Borrowing new dai is done by locking an amount of collateral inside a Collateralized Debt Position (CDP) smart contract, which then sends newly borrowed dai to the borrower's wallet while also creating a corresponding amount of debt. Over time, the CDP accrues a stability fee ("interest") which is added on top of the debt. The borrower can retrieve the posted collateral by *covering* the debt plus the stability fee accrued since the CDP was created. All stability fees from CDPs go into the Buy&Burn contract.
 
 >*__Example 1:__ Bob wants to borrow 100 dai. He locks an amount of ETH worth significantly more than 100 dai into a CDP and uses it to borrow 100 dai. The 100 dai is instantly sent directly to his Ethereum account. Assuming that the stability fee is 0.5% per year over the coming year bob will need 100.5 dai to cover the CDP if he decides to retrieve his ETH after one year.*
 
@@ -73,9 +73,9 @@ Deflation rate adjustments ensure that the dai market price remains stabilized a
 
 The same mechanism works in reverse if the market price is higher than the target price: The deflation rate decreases, leading to an increased demand for borrowing dai and a decreased demand for holding it. This causes the dai to depreciate in value, pushing it down towards the target price.
 
-This mechanism is a negative feedback loop: deviation away from the target price in one direction triggers a push in the opposite direction. The magnitude of the deflation rate adjustments depend on how strongly the market price deviates from the target price, so that strong deviations result in aggressive adjustments while weak deviations result in small adjustments.
+This mechanism is a negative feedback loop: deviation away from the target price in one direction increases the force in the opposite direction. The magnitude of the deflation rate adjustments depends on how long the market price remains on the same side of the target price, so that longer deviations result in aggressive adjustments while shorter deviations result in small adjustments.
 
-### Liquidation: Enforcing the target price
+### Enforcing the target price: Liquidation
 
 To directly enforce the target price in the marketplace, a CDP gets liquidated by Maker if it hits its *liquidation ratio*. Liquidation means Maker takes over the collateral and sells it off in a *continuous splitting auction*. A CSA is an auction mechanism that is specialized for automatic price discovery.
 
@@ -113,7 +113,7 @@ How external agents assist Maker
 
 ### Keepers: Keeping the system economically efficient
 
-Traders that systematically earn an income from Maker and the dai by exploiting simple profit opportunities are called keepers. In a general sense, a keeper is an economic agent that contributes to decentralized systems in exchange for built-in rewards. In the context of Maker, keepers perform several important functions:
+Traders that systematically earn an income from Maker and the dai by exploiting simple profit opportunities are a class of agents called **keepers**. In a general sense, a keeper is an economic agent that contributes to decentralized systems in exchange for built-in rewards. In the context of Maker, keepers perform several important functions:
 
 **Participating in continuous splitting auctions**
 
