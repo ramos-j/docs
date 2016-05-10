@@ -22,17 +22,7 @@ sass:
 navigation:
 
  - title: Introduction to Maker
-   url: /docs/
- - title: The Dai Credit System
-   url: /docs/dai-credit-system/
- - title: Keepers and oracles
-   url: /docs/keepers-and_oracles/
- - title: Governance and decentralization
-   url: /docs/governance-and-decentralization/
- - title: MKR distribution and the MKR fund
-   url: /docs/mkr-distribution-and-the-mkr-fund/
- - title: Custodians
-   url: /docs/custodians/
+   url: /
 
 # About/contact
 author:

@@ -10,7 +10,7 @@ title: Home
       <a href="{{ site.baseurl }}{{ post.url }}">
         {{ page.title }}
           {% if post.version != empty %}
-              <small style="color:#1ABC9C">v{{ post.version }}</small>
+      <small style="color:#1ABC9C">v{{ post.version }}</small>
           {% endif %}
       </a>
     </h1>
@@ -20,17 +20,4 @@ title: Home
     {{ post.content }}
   </article>
   {% endfor %}
-</div>
-
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer</a>
-  {% else %}
-    <span class="pagination-item newer">Newer</span>
-  {% endif %}
 </div>

@@ -1,3 +1,10 @@
+---
+permalink: /
+layout: page
+title: Introduction to Maker
+---
+
+
 Maker
 =====
 
@@ -44,7 +51,7 @@ The total MKR supply starts at 1,000,000 MKR. Before deployment of the system, 4
 
 The remaining undistributed 578,103 MKR were given to the Maker Fund. The Maker Fund is a smart contract separate from the core system that holds money on behalf of the Maker DAO. It is controlled temporarily by MKR owners who participate in governance, called *governors*.
 
-### The basic mechanics 
+### The basic mechanics
 
 The target price of the dai is denominated in Special Drawing Rights (SDR) - an international currency basket maintained by the IMF that has low volatility against all major world currencies. When the dai is launched, the value of 1 DAI will be pegged to an initial target price of 1 USD worth of SDR at [the exchange rate reported by the IMF](https://www.imf.org/external/np/fin/data/rms_sdrv.aspx). After launch, the dai will detach from this initial target and start to slowly fluctuate against the SDR. It will have a bias towards deflation under normal conditions over the long term while maintaining low volatility in the short term.
 
@@ -140,19 +147,19 @@ Governance of Maker
 
 *Direct governance* means controlling Maker directly through voting with an Ethereum account that holds MKR. An account gets a vote for each MKR token held. MKR owners who actively vote and participate in governance are called *governors*. A simple majority vote has full authority of the system to change the voting rules, alter the business logic, spend money from the Fund, and lock down Maker's smart contracts as the system matures.
 
-There are four major phases when governors exercise direct governance over Maker through the voting process. 
+There are four major phases when governors exercise direct governance over Maker through the voting process.
 
-**The first phase** is deploying and publishing the *action proposal*, a smart contract that will change the status quo of Maker if it gets executed by directly modifying the state of its smart contracts. 
+**The first phase** is deploying and publishing the *action proposal*, a smart contract that will change the status quo of Maker if it gets executed by directly modifying the state of its smart contracts.
 
 **The second phase** is *initiating* the action proposal for public vote by the governors. This enables governors to vote on the action proposal with their MKR and starts the expiration timer of the action proposal.
 
-**The third phase** is the voting process. Voting is done according to the voting rules of the system, that themselves are modifiable until they are locked down by the governance process. Each action proposal has an expiration time after which it is automatically abandoned. 
+**The third phase** is the voting process. Voting is done according to the voting rules of the system, that themselves are modifiable until they are locked down by the governance process. Each action proposal has an expiration time after which it is automatically abandoned.
 
 **The fourth phase** is execution of the *action*, the transaction that modifies the state of the Maker smart contracts.
 
 ### Voter organization
 
-An important part of direct governance is voter organization. To make it as straightforward as possible for governors to coordinate their votes and discuss action proposals, a weekly *formal governance meeting* is held as a conference call using the TeamSpeak platform, currently defined to happen every Sunday at 15:00 GMT. 
+An important part of direct governance is voter organization. To make it as straightforward as possible for governors to coordinate their votes and discuss action proposals, a weekly *formal governance meeting* is held as a conference call using the TeamSpeak platform, currently defined to happen every Sunday at 15:00 GMT.
 
 While the contract system allows initiating proposals for vote at any time, during normal conditions it is in practice only done at the governance meeting. If a proposal is initiated for vote outside the social framework of the governance meeting, it indicates either an attack on the system, or a breakdown of the governance framework and a potential governance crisis.
 
