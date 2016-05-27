@@ -131,7 +131,7 @@ Another crucial group of external actors that Maker requires to function are pri
 
 ### Capital Investment Firms: Dai backed by off-chain collateral
 
-Capital Investment Firms (CIFs) are companies (legal entities) that specialize in repackaging legal securities into a format that can be used as collateral for borrowing dai. This is achieved through a smart contract called the *CIF Trap*, which enables Maker to give the CIF a debt ceiling based on its internal holdings of legal securities. CIFs increase the ability of the system to respond to dai demand shocks by borrowind dai and trading it for other assets.
+Capital Investment Firms (CIFs) are companies (legal entities) that specialize in repackaging legal securities into a format that can be used as collateral for borrowing dai. This is achieved through a smart contract called the *CIF Trap*, which enables Maker to give the CIF a debt ceiling based on its internal holdings of legal securities. CIFs increase the ability of the system to respond to dai demand shocks by borrowing dai and trading it for other assets.
 
 Governance of Maker
 -----------------------------------
