@@ -71,7 +71,7 @@ The stability of the dai around the target price is maintained by modifying the 
 
 Deflation rate adjustments ensure that the dai market price remains stabilized around the target price. When the market price of the dai is below the target price, the deflation rate of the dai increases causing borrowing to become more expensive.  This leads to a corresponding reduction in supply of dai. At the same time, the increased deflation rate causes the capital gains from holding dai to go up, and leads to a corresponding increase in dai demand. This combination of reduced supply and increased demand causes the dai to appreciate in value, pushing it up towards the target price.
 
-The same mechanism works in reverse if the market price is higher than the target price: The deflation rate decreases, leading to an increased demand for borrowing dai and a decreased demand for holding it. This causes the dai to depreciate in value, pushing it down towards the target price.
+The same mechanism works in reverse if the market price is higher than the target price: the deflation rate decreases, leading to an increased demand for borrowing dai and a decreased demand for holding it. This causes the dai to depreciate in value, pushing it down towards the target price.
 
 This mechanism is a negative feedback loop: Deviation away from the target price in one direction increases the force in the opposite direction. The magnitude of the deflation rate adjustments depends on how long the market price remains on the same side of the target price. Longer deviations result in aggressive adjustments, while shorter deviations result in small adjustments.
 
@@ -129,9 +129,9 @@ A keeper can additionally act as an Oracle by providing a price feed, as describ
 
 Another crucial group of external actors that Maker requires to function are price feed oracles. Oracles are mechanisms that provide information from the outside world onto the blockchain for smart contracts to consume. Maker needs information about the market price of the dai and its deviation from the target price in order to adjust the deflation rate. It also needs information about the market price of the various assets used as collateral for the dai in order to know when liquidations can be triggered.
 
-### Custodians: Collateral storage specialists
+### Capital Investment Firms: Dai backed by off-chain collateral
 
-A Custodian is a company (legal entity) that specializes in repackaging legal securities into a format that can be used as collateral for borrowing dai. This is achieved through a smart contract called the *custodian trap* which enables Maker to give the custodian a debt ceiling based on its internal holdings of legal securities. Custodians increase the ability of the system to respond to dai demand shocks.
+Capital Investment Firms (CIFs) are companies (legal entities) that specialize in repackaging legal securities into a format that can be used as collateral for borrowing dai. This is achieved through a smart contract called the *CIF Trap*, which enables Maker to give the CIF a debt ceiling based on its internal holdings of legal securities. CIFs increase the ability of the system to respond to dai demand shocks by borrowind dai and trading it for other assets.
 
 Governance of Maker
 -----------------------------------
