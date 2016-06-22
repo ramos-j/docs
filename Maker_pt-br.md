@@ -90,7 +90,7 @@ Simultaneamente, a garantia é vendida por Dai por meio de um CSA. Os Dai arreca
 Gerenciando a estabilidade do sistema
 ---------------------------------------
 
-Mesmo que as garantias em um CDP sejam superiores à sua dívida no instante em que a liquidação do CDP é acionada, não necessariamente essa liquidação será uma operação lucrativa. Baixa liquidez ou um *crash* no mercado podem fazer com que o leilão de liquidação arrecade uma quantia de Dai equivalente a menos MKR do que o que foi diluído no leilão de dívida, resultando em prejuízos para a Maker e um aumento líquido da oferta MKR.
+Mesmo que as garantias em um CDP sejam superiores à sua dívida no instante em que a liquidação do CDP é acionada, não necessariamente essa liquidação será uma operação lucrativa. Baixa liquidez ou um *crash* no mercado podem fazer com que o leilão de liquidação arrecade uma quantia de Dai equivalente a menos MKR do que o que foi diluído no leilão de dívida, resultando em prejuízos para a Maker e um aumento líquido da oferta de MKR.
 
 Apesar dos riscos, a Maker possui vários parâmetros que visam assegurar a estabilidade do sistema.
 
